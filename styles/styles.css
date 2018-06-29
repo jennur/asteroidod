@@ -298,26 +298,10 @@ footer{
 footer ul{
   list-style: none;
 }
-ul.social-media li{
+footer ul li{
   display: inline-block;
   padding: 0.7rem;
 }
-ul.sitemap{
-  display: flex;
-  flex-direction: column;
-  width: 25rem;
-  height: 3rem;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-ul.sitemap li{
-  font-family: 'Arial', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  font-size: 0.6rem;
-  padding: 0.1rem;
-}
-
 footer a:after{
   content: '';
   position: absolute;
