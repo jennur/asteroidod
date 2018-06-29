@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Check out the nearest asteroid of today! Data retrieved from NASA." />
+  <meta name="keywords" content="asteroid, celestial object, celestial bodies, earth, NASA, space" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta property="og:image" content="bg-images/potentially-hazardous-asteroids.jpg">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="200">
+  <meta property="og:image:height" content="200">
+
+  <link rel="stylesheet" href="styles/styles.css" type="text/css" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Asteroid of the Day</title>
+
+</head>
+<body>
+
+  <div id="bg" class="index-bg"></div>
+  <div id="filter"></div>
+
+  <!-- Background element -->
+  <ul class="nav-list" id="background-element">
+    <li>
+      <a id="sun" class="nav-element"><span id="bg-cap"><p>Check out the background-picture</p></span></a>
+    </li>
+    <li>
+        <a id="x" class="nav-element"><span><p>Click for explanation</p></span></a>
+        <div id="bg-expl-container">
+        <div id="bg-box">
+          <p>
+            <a href="https://apod.nasa.gov" target="_blank" title="Opens in new tab">This image</a>
+            shows the orbits of the nearly 1,500 known Potentially Hazardous Asteroids (PHA's) in our solar system.
+            PHA's are considered by <a href="https://cneos.jpl.nasa.gov/about/neo_groups.html" target="_blank" title="Opens in new tab">NASA</a>
+             to be asteroids within a certain distance (specifically <a class="tip">0.05 AU <span>7,479,893.54 km<br /> 4,647,790.36 miles</span></a>) and with an
+            <a class="tip">absolute magnitude (H)<span>Measure of a celestial object's luminosity (total amount of energy emitted per unit time).</span></a>
+            less than or equal to 22.0. If an asteroid does not fulfill at least one of these requirements, it's not considered a PHA.
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+
+  <div id="content"> <!-- For fading out -->
+  <header>
+    <div id="top-nav">
+      <div id="hamburger">
+        <span id="bar-1"></span>
+        <span id="bar-2"></span>
+        <span id="bar-3"></span>
+      </div>
+    </div>
+    <nav id="main-nav">
+      <ul>
+        <li><a id="home" class="nav-element" href="index.html"><span><p>Home</span></p></a></li>
+        <li><a id="mercury" class="nav-element" href="asteroid-of-the-day.html"><span><p>Today's asteroid</p></span></a></li>
+        <li><a id="venus" class="nav-element" href="discover.html"><span><p>Discover more approaching asteroids</p></span></a></li>
+        <li><a id="earth" class="nav-element" href="planetary-defense.html"><span><p>How do we defend our planet?</p></span></a></li>
+        <li><a id="mars" class="nav-element" href="asteroid-belt.html"><span><p>Learn more about the asteroid belt</p></span></a></li>
+        <li><a id="jupiter" class="nav-element" href="well-known-asteroids.html"><span><p>Asteroids visited by spacecrafts</p></span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Asteroid of the day</h1>
+
+    <div class="index-container">
+    <div id="top-container">
+    <div class="asteroid-box">
+
+      <h2 id="asteroid-name" title="The name of the asteroid">Asteroid name</h2>
+      <!--
+      Dynamic content
+      -->
+      <ul id="details-list">
+
+      </ul>
+      <a href="asteroid-of-the-day.html" class="button learn-more-pos">Learn more ></a>
+    </div><!-- asteroid box -->
+  </div> <!--top container -->
+
+</div>
+
+  </main>
+
+  <footer>
+    <nav id="footer-nav">
+      <ul>
+        <li><a href="about.html" title="About Asteroid of the Day">About</a></li>
+        <li><a href="contact.php" title="Contact me">Contact</a></li>
+      </ul>
+      <ul class="social-media">
+        <li><a href="https://www.facebook.com/NASA/" class="fa fa-facebook" title="Follow NASA on Facebook"></a></li>
+        <li><a href="https://www.instagram.com/nasa/" class="fa fa-instagram" title="Follow NASA on Instagram"></a></li>
+        <li><a href="https://twitter.com/nasa" class="fa fa-twitter" title="Follow NASA on Twitter"></a></li>
+        <li>In cooperation with <a href="https://www.nasa.gov">NASA</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2018 Asteroidod All Rights Reserved </p>
+
+  </footer>
+</div> <!-- content -->
+<script src="scripts/api.js"></script>
+<script src="scripts/global.js"></script>
+</body>
+</html>
