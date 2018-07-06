@@ -45,15 +45,6 @@ sun.onclick = function(){
       if(opacity <= 0){
         bg.style.zIndex = "999";
         clearInterval(timer);
-          /* Event listener for displaying background-explanation element*/
-            /*x.onclick = function(){
-              if( bgExplContainer.style.display = "none"){
-                bgExplContainer.style.display = "block";
-              }
-              else{
-                bgExplContainer.style.display = "none";
-              }
-            };*/
             document.getElementById('bg-cap').innerHTML = "<p>Bring back the content</p>";
         }
 

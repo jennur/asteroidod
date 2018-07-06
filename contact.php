@@ -109,7 +109,7 @@ if(isset($_POST['submit'])){
       <nav id="footer-nav">
         <ul>
           <li><a href="about.html" title="About Asteroid of the Day">About</a></li>
-          <li><a href="contact.html" title="Contact me">Contact</a></li>
+          <li><a href="contact.html" title="Contact us">Contact</a></li>
         </ul>
         <ul class="social-media">
           <li><a href="https://www.facebook.com/NASA/" class="fa fa-facebook" title="Follow NASA on Facebook"></a></li>
@@ -117,7 +117,7 @@ if(isset($_POST['submit'])){
           <li><a href="https://twitter.com/nasa" class="fa fa-twitter" title="Follow NASA on Twitter"></a></li>
         </ul>
       </nav>
-      <p>&copy; 2018 Asteroidod All Rights Reserved </p>
+      <p>&copy; 2018 AsteroidOD All Rights Reserved </p>
 
     </footer>
   </div> <!-- content -->

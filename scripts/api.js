@@ -7,6 +7,7 @@ var startDate = dateFormat(date);
 var endDate = startDate;//dateFormat(nextDate);
 console.log(startDate);
 
+var loadIcon = document.getElementById('loading');
 var request = new XMLHttpRequest(); //creating an HTTP request to connect to the API
 request.open('GET', 'https://api.nasa.gov/neo/rest/v1/feed?start_date=' + startDate + '&end_date=' + endDate + '&detailed=true&api_key=' + apiKey, true);
 //request.open('GET', 'https://api.nasa.gov/neo/rest/v1/feed/today?detailed=true&api_key=' + apiKey, true); //making asynchronous call to load JSON data
@@ -14,6 +15,8 @@ request.onload = function(){ //creating function to be called when content is lo
   if(this.status >= 200 && this.status < 400){ //if the request was successful
     var data = JSON.parse(this.response); //assign loaded JSON content to variable
     console.log(data);
+    loadIcon.style.display = "none";
+
     var asteroid = data["near_earth_objects"][startDate]["0"];
     var diameter, velocity, distance, absMagn, hazardous, missDist;
 
@@ -70,6 +73,9 @@ request.onload = function(){ //creating function to be called when content is lo
         if(this.status >= 200 && this.status < 400){
           var detailsData = JSON.parse(this.response);
           console.log(detailsData);
+          loadIcon.style.display = "none";
+          document.getElementById('timeline').style.display = "block";
+
           // APPEND CONTENT TO DETAILS PAGE
             document.getElementById('asteroid-details-name').innerHTML = detailsData['name'];
             var detailsList = document.getElementById('details');
@@ -144,7 +150,7 @@ request.onload = function(){ //creating function to be called when content is lo
         }
         else{
           console.log('error. Request status: ' + detailsRequest.status);
-          document.getElementsByTagName('main')[0].innerHTML = "<p>Content cannot load at the moment</p>";
+          errorMsg();
         }
       }
       detailsRequest.send();
@@ -209,8 +215,7 @@ request.onload = function(){ //creating function to be called when content is lo
   }
   else{
     console.log('error. Request status: ' + request.status); //error message to the console if request failed
-    document.getElementsByTagName('main')[0].innerHTML = "<p>Content cannot load at the moment</p>";
-
+    errorMsg();
   }
 };
 request.send();
@@ -241,4 +246,10 @@ function display(){
   else{
     this.childNodes[1].classList.add('hide-robot');
   }
+}
+
+// displaying error $message
+function errorMsg(){
+  document.getElementById('loadError').innerHTML = "<p>Content cannot load at the moment</p>";
+  loadIcon.style.display = "none";
 }
