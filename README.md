@@ -1,5 +1,5 @@
 # AsteroidOD
-Further development of AsteroidOD. Originally NASAmicro.
+Further development of AsteroidOD. Originally NASAmicro - started as a school project at Noroff.
 
 Is to be found at http://asteroidod.com
 
