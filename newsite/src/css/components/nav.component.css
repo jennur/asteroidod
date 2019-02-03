@@ -1,8 +1,6 @@
 
 .c-main-nav-wrapper {
-  display: flex; 
-  position: absolute;
-  left: 0;  
+  display: flex;  
 }
 
 .c-main-nav {

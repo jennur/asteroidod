@@ -13,32 +13,32 @@ const Navigation = () => {
       <nav className="c-main-nav-wrapper">
         <ul className="c-main-nav">
           <li className="c-main-nav__item">
-            <Link className="c-main-nav__item--link" to="/about">
+            <Link className="c-main-nav__item--link" to="/details">
               <img className="c-main-nav__icon" src={ sun }/>
             </Link>
           </li>
           <li className="c-main-nav__item">
-            <Link className="c-main-nav__item--link" to="/details">
+            <Link className="c-main-nav__item--link" to="/approaching">
               <img className="c-main-nav__icon" src={ mercury }/>
             </Link>
           </li>
           <li className="c-main-nav__item">
-            <Link className="c-main-nav__item--link" to="/approaching">
+            <Link className="c-main-nav__item--link" to="/what-are-asteroids">
               <img className="c-main-nav__icon" src={ venus }/>
             </Link>
           </li>
           <li className="c-main-nav__item">
-            <Link className="c-main-nav__item--link" to="/approaching">
+            <Link className="c-main-nav__item--link" to="/game">
               <img className="c-main-nav__icon" src={ earth }/>
             </Link>
           </li>
           <li className="c-main-nav__item">
-            <Link className="c-main-nav__item--link" to="/approaching">
+            <Link className="c-main-nav__item--link" to="/contact">
               <img className="c-main-nav__icon" src={ mars }/>
             </Link>
           </li>
           <li className="c-main-nav__item">
-            <Link className="c-main-nav__item--link" to="/approaching">
+            <Link className="c-main-nav__item--link" to="/about">
               <img className="c-main-nav__icon" src={ jupiter }/>
             </Link>
           </li>

@@ -11,3 +11,22 @@ header {
   justify-content: center; 
   align-items: center; 
 }
+
+main {
+  flex-basis: 80%;
+  display: flex;
+  margin: 0 auto;
+}
+
+nav {
+  flex-basis: 20%;
+  margin: 0; 
+}
+
+footer {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  font-size: var(--fontSizeSmall);
+  color: var(--colorWhite);
+}

@@ -9,16 +9,22 @@
   --bodyFont: 'B612 Mono', monospace;
 
 /* Font Sizes */
-  --fontSizeRoot: 16px; 
+  --fontSizeRoot: 16px;
+  --fontSizeSmall: 0.8em;
+  --fontSizeMedium: 1.5em;
+  --fontSizeLarge: 2em;
   --fontSizeXL: 2.5em;
 
 /* Colors */
 
   --colorBlack: #000;
+  --colorWhite: #fff;
   --colorYellow: #ffef00;
   --colorBlue: #2b7f99;
 
 /* Spacing */
 
   --spacingSmall: 10px;
+  --spacingMedium: 20px;
+  --spacingLarge: 30px;
 }

@@ -1,0 +1,41 @@
+
+.c-text-box {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto; 
+  font-size: var(--fontSizeSmall);
+  border-radius: 3px;
+}
+
+.c-text-box p {
+  padding: var(--spacingLarge);
+}
+
+.c-text-box--blue {
+  background-color: var(--colorBlue);
+  color: var(--colorWhite);
+}
+
+.c-text-box--blue a {
+  color: var(--colorBlack);
+  border-bottom: 1px dashed var(--colorBlack);
+  transition: 0.5s;
+}
+
+.c-text-box--blue a:hover {
+  border-bottom: 1px solid var(--colorBlack);
+
+}
+
+.c-text-box--black {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+}
+
+
+.c-text-box--black a {
+  color: var(--colorYellow);
+  border-bottom: 1px dashed var(--colorYellow);
+  transition: 0.5s;
+}

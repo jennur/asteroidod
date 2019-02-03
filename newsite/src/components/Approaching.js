@@ -4,7 +4,7 @@ const Approaching = () => {
     return(
     <main>
       <div>
-          APPROACHING
+          <h2>Approaching Asteroids</h2>
       </div>
     </main>
 );
