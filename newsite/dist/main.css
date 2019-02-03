@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Major+Mono+Display);
+@import url(https://fonts.googleapis.com/css?family=B612+Mono);
+html {
+  background-color: var(--colorBlack);
+  color: var(--colorYellow);
+  font-size: var(--fontSizeRoot);
+  font-family: var(--bodyFont);
+}
+
+header {
+  display: flex; 
+  width: 100%; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+h1 {
+  font-family: var(--headerFont);
+  color: var(--colorYellow);
+  font-size: var(--fontSizeXL);
+}
+
+.c-main-nav-wrapper {
+  display: flex; 
+  position: absolute;
+  left: 0;  
+}
+
+.c-main-nav {
+  color: var(--colorYellow);
+  list-style: none;
+  padding: 0;
+}
+
+.c-main-nav__item {
+  padding: var(--spacingSmall);
+}
+
+.c-main-nav__item--link {
+  color: var(--colorYellow);
+  text-decoration: none; 
+  margin: var(--spacingSmall);
+  padding-top: var(--spacingSmall);
+
+}
+
+.c-main-nav__item--link:visited {
+    color: var(--colorYellow);
+}
+
+.c-main-nav__icon {
+    width: 48px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+.c-main-nav__icon:hover {
+    width: 58px;
+    margin: 0px;
+}
+:root {
+
+/* Fonts */
+  --headerFont: 'Major Mono Display', monospace;
+  --bodyFont: 'B612 Mono', monospace;
+
+/* Font Sizes */
+  --fontSizeRoot: 16px; 
+  --fontSizeXL: 2.5em;
+
+/* Colors */
+
+  --colorBlack: #000;
+  --colorYellow: #ffef00;
+  --colorBlue: #2b7f99;
+
+/* Spacing */
+
+  --spacingSmall: 10px;
+}
+
+/* Elements */
+
+/* Components */
+
+/* Settings */
