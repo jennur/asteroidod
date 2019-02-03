@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import './style.css';
+import './css/main.css';
 import React from "react";
 import ReactDOM from "react-dom";
 import App from './App';

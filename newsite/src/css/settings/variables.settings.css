@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+
+:root {
+
+/* Fonts */
+  --headerFont: 'Major Mono Display', monospace;
+
+/* Colors */
+
+  --colorBlack: #000;
+  --colorYellow: #ffef00;
+  --colorBlue: #2b7f99;
+}
