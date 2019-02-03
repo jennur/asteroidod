@@ -1,6 +1,7 @@
 # AsteroidOD
-Further development of AsteroidOD. Originally NASAmicro - started as a school project at Noroff.
 
-Is to be found at http://asteroidod.com
+Check out the nearest asteroid atm! ☄️
 
-Want to contribute? Send me a request or message me!
+A site based on NASA's NEO APIs 
+
+https://api.nasa.gov/api.html#neows-feed
