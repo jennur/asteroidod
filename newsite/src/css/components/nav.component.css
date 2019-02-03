@@ -1,0 +1,23 @@
+
+.c-main-nav {
+  color: var(--colorYellow);
+}
+
+.c-main-nav__item {
+  padding: var(--spacingSmall);
+}
+
+.c-main-nav__item--link {
+  color: var(--colorYellow);
+  text-decoration: none; 
+  margin: var(--spacingSmall);
+  padding-top: var(--spacingSmall);
+
+}
+
+.c-main-nav__item--link:hover {
+    border-bottom: 1px solid var(--colorBlue);
+}
+.c-main-nav__item--link:visited {
+    color: var(--colorYellow);
+}

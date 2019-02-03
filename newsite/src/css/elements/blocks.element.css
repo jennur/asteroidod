@@ -1,4 +1,6 @@
 html {
   background-color: var(--colorBlack);
   color: var(--colorYellow);
+  font-size: var(--fontSizeRoot);
+  font-family: var(--bodyFont);
 }

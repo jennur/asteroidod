@@ -3,5 +3,8 @@
 @import './elements/blocks.element.css';
 @import './elements/headings.element.css';
 
+/* Components */
+@import './components/nav.component.css';
+
 /* Settings */
 @import './settings/variables.settings.css';

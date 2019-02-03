@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+@import url('https://fonts.googleapis.com/css?family=B612+Mono');
+
 
 :root {
 
 /* Fonts */
   --headerFont: 'Major Mono Display', monospace;
+  --bodyFont: 'B612 Mono', monospace;
+
+/* Font Sizes */
+  --fontSizeRoot: 16px; 
+  --fontSizeXL: 2.5em;
 
 /* Colors */
 
   --colorBlack: #000;
   --colorYellow: #ffef00;
   --colorBlue: #2b7f99;
+
+/* Spacing */
+
+  --spacingSmall: 10px;
 }
