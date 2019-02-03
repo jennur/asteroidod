@@ -1,6 +1,13 @@
 
+.c-main-nav-wrapper {
+  display: flex; 
+  position: absolute;
+  left: 0;  
+}
 .c-main-nav {
   color: var(--colorYellow);
+  list-style: none;
+  padding: 0;
 }
 
 .c-main-nav__item {
@@ -15,9 +22,17 @@
 
 }
 
-.c-main-nav__item--link:hover {
-    border-bottom: 1px solid var(--colorBlue);
-}
 .c-main-nav__item--link:visited {
     color: var(--colorYellow);
+}
+
+.c-main-nav__icon {
+    width: 48px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+.c-main-nav__icon:hover {
+    width: 58px;
+    margin: 0px;
 }

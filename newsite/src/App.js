@@ -1,16 +1,17 @@
 import React from "react";
 import Header from './components/Header';
+import Navigation from './components/Navigation';
+
 import About from './components/About';
 import Details from './components/Details';
 import Approaching from './components/Approaching';
 
 
+
 import {
     BrowserRouter as Router,
     Route,
-    Link,
     Switch,
-    Redirect
   } from 'react-router-dom'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
     <Router>
       <div>
         <Header/>
+        <Navigation/>
         <Switch>
           <Route path="/about" component={ About }/>
           <Route path="/details" component={ Details }/>

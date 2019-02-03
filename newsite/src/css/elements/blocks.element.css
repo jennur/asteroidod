@@ -4,3 +4,10 @@ html {
   font-size: var(--fontSizeRoot);
   font-family: var(--bodyFont);
 }
+
+header {
+  display: flex; 
+  width: 100%; 
+  justify-content: center; 
+  align-items: center; 
+}
