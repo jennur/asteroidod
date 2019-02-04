@@ -3,11 +3,11 @@ import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
-import About from './components/About';
-import Details from './components/Details';
-import Contact from './components/Contact';
-import Approaching from './components/Approaching';
-import Game from './components/Game';
+import About from './pages/About';
+import Details from './pages/Details';
+import Contact from './pages/Contact';
+import Approaching from './pages/Approaching';
+import Game from './pages/Game';
 
 
 

@@ -33,13 +33,13 @@ const Navigation = () => {
             </Link>
           </li>
           <li className="c-main-nav__item">
-            <Link className="c-main-nav__item--link" to="/contact">
-              <img className="c-main-nav__icon" src={ mars }/>
+            <Link className="c-main-nav__item--link" to="/about">
+              <img className="c-main-nav__icon" src={ jupiter }/>
             </Link>
           </li>
           <li className="c-main-nav__item">
-            <Link className="c-main-nav__item--link" to="/about">
-              <img className="c-main-nav__icon" src={ jupiter }/>
+            <Link className="c-main-nav__item--link" to="/contact">
+              <img className="c-main-nav__icon" src={ mars }/>
             </Link>
           </li>
         </ul>
