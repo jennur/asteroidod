@@ -17,7 +17,8 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   }, 
   devServer: {
     contentBase: './dist'
@@ -49,6 +50,9 @@ module.exports = {
         ],
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true,
   }, 
   plugins: [
       htmlPlugin, 
