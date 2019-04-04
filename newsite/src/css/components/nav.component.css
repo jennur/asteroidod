@@ -1,6 +1,15 @@
-
-.c-main-nav-wrapper {
-  display: flex;  
+@media only screen and (min-width: 768px) {
+  .flex-wrap .c-main-nav-wrapper {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .flex-wrap .c-main-nav-wrapper {
+    display: none;
+  }
+}
+.burger-menu .c-main-nav-wrapper {
+  display: flex;
 }
 
 .c-main-nav {
@@ -10,28 +19,32 @@
 }
 
 .c-main-nav__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 75px;
   padding: var(--spacingSmall);
 }
 
 .c-main-nav__item--link {
   color: var(--colorYellow);
-  text-decoration: none; 
+  text-decoration: none;
   margin: var(--spacingSmall);
   padding-top: var(--spacingSmall);
-
 }
 
 .c-main-nav__item--link:visited {
-    color: var(--colorYellow);
+  color: var(--colorYellow);
 }
 
 .c-main-nav__icon {
-    width: 48px;
-    margin: 5px;
-    transition: 0.2s;
+  width: 48px;
+  margin: 5px;
+  transition: 0.2s;
 }
 
 .c-main-nav__icon:hover {
-    width: 58px;
-    margin: 0px;
+  width: 58px;
+  margin: 0px;
 }

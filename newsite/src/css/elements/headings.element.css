@@ -9,7 +9,7 @@ h1 {
 }
 
 h2{
-  font-size: var(--fontSizeLarge);
+  font-size: var(--fontSizeMedium);
   color: var(--colorBlue);
 }
 

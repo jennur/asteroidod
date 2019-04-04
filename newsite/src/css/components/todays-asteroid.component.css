@@ -1,0 +1,35 @@
+.todays-asteroid-wrapper {
+  display: block;
+  width: 90%;
+  max-width: var(--tabletWidth);
+  background-color: var(--colorBlue);
+  border-radius: 5px;
+}
+
+.todays-asteroid {
+  padding: var(--spacingLarge) var(--spacingMedium);
+}
+
+.todays-asteroid a {
+  color: var(--colorBlack);
+  border-bottom: 1px dashed var(--colorBlack);
+  transition: 0.5s;
+}
+
+.todays-asteroid a:hover {
+  border-bottom: 1px solid var(--colorBlack);
+}
+
+.todays-asteroid__name {
+  display: block;
+  width: max-content;
+  color: var(--colorBlack);
+  font-family: var(--headerFont);
+  font-size: var(--fontSizeLarge);
+  padding: var(--spacingMedium);
+  margin: 0 auto;
+}
+
+.todays-asteroid__details {
+  color: var(--colorWhite);
+}

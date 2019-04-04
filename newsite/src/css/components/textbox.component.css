@@ -1,9 +1,8 @@
-
 .c-text-box {
   display: flex;
   flex-direction: column;
   width: 70%;
-  height: auto; 
+  height: auto;
   font-size: var(--fontSizeSmall);
   border-radius: 3px;
 }
@@ -25,14 +24,12 @@
 
 .c-text-box--blue a:hover {
   border-bottom: 1px solid var(--colorBlack);
-
 }
 
 .c-text-box--black {
   background-color: var(--colorBlack);
   color: var(--colorWhite);
 }
-
 
 .c-text-box--black a {
   color: var(--colorYellow);

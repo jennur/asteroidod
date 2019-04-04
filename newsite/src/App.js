@@ -1,43 +1,41 @@
 import React from "react";
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import "./css/main.css";
+import dateFormat from "./js/dateFormat";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Details from "./pages/Details";
+import Contact from "./pages/Contact";
+import Approaching from "./pages/Approaching";
 
-import About from './pages/About';
-import Details from './pages/Details';
-import Contact from './pages/Contact';
-import Approaching from './pages/Approaching';
-import Game from './pages/Game';
+import { HashRouter, Route, Switch } from "react-router-dom";
 
-
-
-import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
-  } from 'react-router-dom'
-
-const App = () => {
-
-  return(
-    <Router>
+class App extends React.Component {
+  render() {
+    return (
       <div>
-        <Header/>
-        <div className="flex-wrap">
-         <Navigation/>
-         <Switch>
-           <Route path="/about" component={ About }/>
-           <Route path="/details" component={ Details }/>
-           <Route path="/approaching" component={ Approaching }/>
-           <Route path="/contact" component={ Contact }/>
-           <Route path="/game" component={ Game }/>
-         </Switch>
-        </div>
-        <Footer/>
+        <HashRouter>
+          <div>
+            <Header />
+            <div className="flex-wrap">
+              <Navigation isBurgerMenu={false} />
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/details" component={Details} />
+                <Route exact path="/approaching" component={Approaching} />
+                <Route exact path="/contact" component={Contact} />
+              </Switch>
+            </div>
+            <Footer />
+          </div>
+        </HashRouter>
       </div>
-      
-    </Router>
-  );
+    );
+  }
+  componentDidMount() {}
 }
 
-export default App; 
+export default App;

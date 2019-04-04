@@ -1,17 +1,18 @@
-
 /* Elements */
-@import './elements/blocks.element.css';
-@import './elements/headings.element.css';
-@import './elements/links.element.css';
+@import "./elements/blocks.element.css";
+@import "./elements/headings.element.css";
+@import "./elements/links.element.css";
 
 /* Components */
-@import './components/form.component.css';
-@import './components/nav.component.css';
-@import './components//loading.component.css';
-@import './components/textbox.component.css';
+@import "./components/burger-menu.component.css";
+@import "./components/form.component.css";
+@import "./components/nav.component.css";
+@import "./components//loading.component.css";
+@import "./components/textbox.component.css";
+@import "./components/todays-asteroid.component.css";
 
 /* Settings */
-@import './settings/variables.settings.css';
+@import "./settings/variables.settings.css";
 
 /* Objects */
-@import './objects/grid.object.css';
+@import "./objects/grid.object.css";

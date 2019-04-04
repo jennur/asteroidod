@@ -1,14 +1,15 @@
 import React from "react";
-import Loading from "../components/Loading";
+import dateFormat from "../js/dateFormat";
 import TodaysAsteroid from "../components/TodaysAsteroid";
+import Loading from "../components/Loading";
 
-class Details extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.renderDetails = this.renderDetails.bind(this);
+    this.renderContent = this.renderContent.bind(this);
     this.state = {
       isLoaded: false,
-      closeApproachData: [],
+      numNeos: "",
       asteroidName: "",
       approachDate: "",
       absoluteMagnitude: "",
@@ -31,17 +32,13 @@ class Details extends React.Component {
     };
   }
   render() {
-    let details = this.state.isLoaded ? this.renderDetails() : <Loading />;
-    return (
-      <main>
-        <h2>Asteroid Details</h2>
-        {details}
-        <h2>Close Approach Dates</h2>
-      </main>
-    );
+    let loading = <Loading />;
+    let content = this.state.isLoaded ? this.renderContent() : loading;
+    return <main>{content}</main>;
   }
-  renderDetails() {
+  renderContent() {
     let asteroid = this.state;
+
     return (
       <div>
         <TodaysAsteroid
@@ -57,31 +54,36 @@ class Details extends React.Component {
           missDistanceKilometers={asteroid.missDistance.kilometers}
           missDistanceMiles={asteroid.missDistance.miles}
         />
+
+        <h2>
+          There are
+          <span className="numNeos"> {asteroid.numNeos} </span>
+          more near asteroids atm
+        </h2>
       </div>
     );
   }
-  renderCloseApproachDates() {
-    let closeApproachData = this.state.closeApproachData;
-  }
   componentDidMount() {
-    let apiKey = "sl1hP0MUGkJLn8tw2qXsxb6235u91ndRBDuD0O2d";
-    let asteroidId = localStorage.getItem("asteroidId");
-    const url =
-      "https://api.nasa.gov/neo/rest/v1/neo/" +
-      asteroidId +
-      "?api_key=" +
-      apiKey;
+    var date = dateFormat();
+    var apiKey = "sl1hP0MUGkJLn8tw2qXsxb6235u91ndRBDuD0O2d";
 
-    fetch(url)
+    fetch(
+      "https://api.nasa.gov/neo/rest/v1/feed?start_date=" +
+        date +
+        "&end_date=" +
+        date +
+        "&detailed=true&api_key=" +
+        apiKey
+    )
       .then(response => {
         return response.json();
       })
       .then(data => {
-        let asteroid = data;
+        let asteroid = data.near_earth_objects[date][0];
         let closeApproachData = asteroid.close_approach_data[0];
 
         this.setState({
-          closeApproachData: closeApproachData,
+          numNeos: data.element_count,
           asteroidName: asteroid.name,
           approachDate: closeApproachData.close_approach_date,
           absoluteMagnitude: Math.round(asteroid.absolute_magnitude_h),
@@ -120,9 +122,9 @@ class Details extends React.Component {
           },
           isLoaded: true
         });
-        console.log(closeApproachData);
+        console.log(asteroid);
       });
   }
 }
 
-export default Details;
+export default Home;

@@ -44,7 +44,7 @@ h1 {
 }
 
 h2{
-  font-size: var(--fontSizeLarge);
+  font-size: var(--fontSizeMedium);
   color: var(--colorBlue);
 }
 
@@ -229,12 +229,11 @@ fieldset{
     from { transform:rotate(360deg); }
     to { transform:rotate(0deg); }
 }
-
 .c-text-box {
   display: flex;
   flex-direction: column;
   width: 70%;
-  height: auto; 
+  height: auto;
   font-size: var(--fontSizeSmall);
   border-radius: 3px;
 }
@@ -256,7 +255,6 @@ fieldset{
 
 .c-text-box--blue a:hover {
   border-bottom: 1px solid var(--colorBlack);
-
 }
 
 .c-text-box--black {
@@ -264,12 +262,12 @@ fieldset{
   color: var(--colorWhite);
 }
 
-
 .c-text-box--black a {
   color: var(--colorYellow);
   border-bottom: 1px dashed var(--colorYellow);
   transition: 0.5s;
 }
+
 :root {
 
 /* Fonts */
