@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 class TodaysAsteroid extends React.Component {
   constructor(props) {
@@ -41,7 +40,6 @@ class TodaysAsteroid extends React.Component {
               </ul>
             </li>
           </ul>
-          <Link to="/details">See all approach dates</Link>
         </div>
       </div>
     );

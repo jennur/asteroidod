@@ -2,6 +2,7 @@ import React from "react";
 import dateFormat from "../js/dateFormat";
 import TodaysAsteroid from "../components/TodaysAsteroid";
 import Loading from "../components/Loading";
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
   constructor(props) {
@@ -54,6 +55,7 @@ class Home extends React.Component {
           missDistanceKilometers={asteroid.missDistance.kilometers}
           missDistanceMiles={asteroid.missDistance.miles}
         />
+        <Link to="/details">See all approach dates</Link>
 
         <h2>
           There are
