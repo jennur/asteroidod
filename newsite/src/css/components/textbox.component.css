@@ -18,7 +18,7 @@
 }
 
 .c-text-box--blue {
-  background-color: var(--colorBlue);
+  background-color: var(--colorBlueTransparent);
   color: var(--colorWhite);
 }
 

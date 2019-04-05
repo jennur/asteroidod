@@ -20,7 +20,9 @@
   --colorBlackTransparent: rgba(0, 0, 0, 0.9);
   --colorWhite: #eee;
   --colorYellow: #ffef00;
+  --colorYellowTransparent: rgba(255, 239, 0, 0.7);
   --colorBlue: #2b7f99;
+  --colorBlueTransparent: rgba(43, 127, 153, 0.7);
 
   /* Spacing */
 

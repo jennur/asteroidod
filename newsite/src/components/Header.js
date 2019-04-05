@@ -4,9 +4,9 @@ import BurgerMenu from "./BurgerMenu";
 class Header extends React.Component {
   render() {
     return (
-      <header className="header flex-wrap">
-        <BurgerMenu />
+      <header className="header">
         <h1 className="header__headline">Asteroid of the Day</h1>
+        <BurgerMenu />
       </header>
     );
   }

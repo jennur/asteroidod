@@ -11,7 +11,7 @@
 }
 
 .todays-asteroid-wrapper--blue {
-  background-color: var(--colorBlue);
+  background-color: var(--colorBlueTransparent);
   padding: var(--spacingMedium);
 }
 

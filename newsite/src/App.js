@@ -6,6 +6,7 @@ import "./css/main.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Details from "./pages/Details";
+import AsteroidsVisitedByAircrafts from "./pages/AsteroidsVisitedByAircrafts";
 import Contact from "./pages/Contact";
 import Approaching from "./pages/Approaching";
 
@@ -21,9 +22,14 @@ class App extends React.Component {
             <Navigation isBurgerMenu={false} />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
               <Route exact path="/details" component={Details} />
               <Route exact path="/approaching" component={Approaching} />
+              <Route
+                exact
+                path="/asteroids-visited-by-aircrafts"
+                component={AsteroidsVisitedByAircrafts}
+              />
+              <Route exact path="/about" component={About} />
               <Route exact path="/contact" component={Contact} />
             </Switch>
             <Footer />

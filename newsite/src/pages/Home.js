@@ -4,7 +4,6 @@ import formatNumber from "../js/formatNumber";
 import Loading from "../components/Loading";
 import { Link } from "react-router-dom";
 import AsteroidDataBlock from "../components/AsteroidDataBlock";
-import asteroidCanvas from "../js/asteroidCanvas";
 
 class Home extends React.Component {
   constructor(props) {
@@ -87,7 +86,6 @@ class Home extends React.Component {
     );
   }
   componentDidMount() {
-    //asteroidCanvas();
     var date = dateFormat();
     var apiKey = "sl1hP0MUGkJLn8tw2qXsxb6235u91ndRBDuD0O2d";
 

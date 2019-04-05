@@ -6,7 +6,7 @@
 
 .accordion-section__title {
   padding: var(--spacingSmall);
-  background-color: var(--colorYellow);
+  background-color: var(--colorYellowTransparent);
   margin-bottom: var(--spacingSmall);
   border-radius: 5px;
   color: var(--colorBlack);

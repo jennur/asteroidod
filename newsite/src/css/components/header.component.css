@@ -1,8 +1,16 @@
 .header {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
   min-height: 120px;
   margin: 0 auto;
   max-width: 600px;
   text-align: center;
+}
+
+.header__headline {
+  flex-basis: 85%;
+  font-size: var(--fontSizeLarge);
 }
 
 @media only screen and (min-width: 1025px) {
@@ -13,5 +21,7 @@
   }
   .header__headline {
     margin: var(--spacingMedium) 0px var(--spacingLarge) 0px;
+    font-size: var(--fontSizeXL);
+    flex-basis: 100%;
   }
 }

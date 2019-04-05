@@ -1,7 +1,7 @@
 .burger-menu {
   display: flex;
   justify-content: flex-end;
-  flex-basis: 100%;
+  flex-basis: 15%;
   margin-top: var(--spacingMedium);
 }
 
@@ -13,8 +13,8 @@
 
 .burger-menu__burger {
   display: block;
-  width: 40px;
-  height: 30px;
+  width: 35px;
+  height: 22px;
   float: right;
   z-index: 999;
 }
@@ -26,7 +26,7 @@
 .burger-menu__burger span {
   display: block;
   width: 100%;
-  height: 4px;
+  height: 3px;
   border-radius: 2px;
   padding: 0;
   margin-bottom: 7px;
@@ -34,12 +34,12 @@
 }
 
 .burger-menu__navigation {
-  position: absolute;
-  top: 60px;
+  position: fixed;
+  top: 0;
   left: 0;
   min-width: 100%;
   min-height: 800px;
   padding-left: var(--spacingMedium);
   background-color: var(--colorBlackTransparent);
-  z-index: 999;
+  z-index: 99;
 }
