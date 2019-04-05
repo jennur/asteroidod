@@ -32,7 +32,6 @@ class BurgerMenu extends React.Component {
   }
   handleClick() {
     this.setState({ isClicked: !this.state.isClicked });
-    console.log(this.state.isClicked);
   }
 }
 

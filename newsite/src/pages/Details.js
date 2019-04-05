@@ -2,6 +2,7 @@ import React from "react";
 import Loading from "../components/Loading";
 import AsteroidDataBlock from "../components/AsteroidDataBlock";
 import AccordionSection from "../components/AccordionSection";
+import formatNumber from "../js/formatNumber";
 
 class Details extends React.Component {
   constructor(props) {
@@ -76,22 +77,42 @@ class Details extends React.Component {
     });
 
     return (
-      <section className="asteroid__close-approach-data">
+      <section className="content-container">
         <h2>{closeApproachData.length} known close approach dates </h2>
         <div className="accordion">{accordionSections}</div>
       </section>
     );
   }
   renderAccordionSections(element, key) {
+    let kilometersPerHour = formatNumber(
+      element.relative_velocity.kilometers_per_hour
+    );
+    let kilometersPerSecond = formatNumber(
+      element.relative_velocity.kilometers_per_second
+    );
+    let milesPerHour = formatNumber(element.relative_velocity.miles_per_hour);
+    let missDistanceAstronomical = formatNumber(
+      element.miss_distance.astronomical
+    );
+    let missDistanceLunar = formatNumber(element.miss_distance.lunar);
+    let missDistanceKilometers = formatNumber(element.miss_distance.kilometers);
+    let missDistanceMiles = formatNumber(element.miss_distance.miles);
+
     return (
       <AccordionSection key={key} title={element.close_approach_date}>
         <AsteroidDataBlock
           transparent={true}
+          orbitingBody={element.orbiting_body}
+          relativeVelocity={{
+            kmPerHour: kilometersPerHour,
+            kmPerSecond: kilometersPerSecond,
+            milesPerHour: milesPerHour
+          }}
           missDistance={{
-            astronomical: element.miss_distance.astronomical,
-            lunar: element.miss_distance.lunar,
-            kilometers: element.miss_distance.kilometers,
-            miles: element.miss_distance.miles
+            astronomical: missDistanceAstronomical,
+            lunar: missDistanceLunar,
+            kilometers: missDistanceKilometers,
+            miles: missDistanceMiles
           }}
         />
       </AccordionSection>
@@ -113,11 +134,10 @@ class Details extends React.Component {
       .then(data => {
         let asteroid = data;
         let closeApproachData = asteroid.close_approach_data;
-
         this.setState({
           closeApproachData: closeApproachData,
           asteroidName: asteroid.name,
-          absoluteMagnitude: Math.round(asteroid.absolute_magnitude_h),
+          absoluteMagnitude: asteroid.absolute_magnitude_h,
           diameter: {
             meters: {
               max:

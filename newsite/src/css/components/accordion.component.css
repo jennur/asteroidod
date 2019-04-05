@@ -11,3 +11,17 @@
   border-radius: 5px;
   color: var(--colorBlack);
 }
+
+.accordion-section__title::after {
+  content: "▼";
+  float: right;
+  font-size: var(--fontSizeSmall);
+}
+
+.accordion-section__title:hover {
+  cursor: pointer;
+}
+
+.accordion-section__content {
+  padding-bottom: var(--spacingSmall);
+}

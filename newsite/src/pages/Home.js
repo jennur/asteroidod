@@ -4,6 +4,7 @@ import formatNumber from "../js/formatNumber";
 import Loading from "../components/Loading";
 import { Link } from "react-router-dom";
 import AsteroidDataBlock from "../components/AsteroidDataBlock";
+import asteroidCanvas from "../js/asteroidCanvas";
 
 class Home extends React.Component {
   constructor(props) {
@@ -86,6 +87,7 @@ class Home extends React.Component {
     );
   }
   componentDidMount() {
+    //asteroidCanvas();
     var date = dateFormat();
     var apiKey = "sl1hP0MUGkJLn8tw2qXsxb6235u91ndRBDuD0O2d";
 
@@ -108,51 +110,37 @@ class Home extends React.Component {
           numNeos: data.element_count,
           asteroidName: asteroid.name,
           approachDate: closeApproachData.close_approach_date,
-          absoluteMagnitude: Math.round(asteroid.absolute_magnitude_h),
+          absoluteMagnitude: asteroid.absolute_magnitude_h,
           diameter: {
             meters: {
               max: formatNumber(
-                Math.round(
-                  asteroid.estimated_diameter.meters.estimated_diameter_max *
-                    100
-                ) / 100
+                asteroid.estimated_diameter.meters.estimated_diameter_max
               ),
               min: formatNumber(
-                Math.round(
-                  asteroid.estimated_diameter.meters.estimated_diameter_min *
-                    100
-                ) / 100
+                asteroid.estimated_diameter.meters.estimated_diameter_min
               )
             },
             feet: {
               max: formatNumber(
-                Math.round(
-                  asteroid.estimated_diameter.feet.estimated_diameter_max * 100
-                ) / 100
+                asteroid.estimated_diameter.feet.estimated_diameter_max
               ),
               min: formatNumber(
-                Math.round(
-                  asteroid.estimated_diameter.feet.estimated_diameter_min * 100
-                ) / 100
+                asteroid.estimated_diameter.feet.estimated_diameter_min
               )
             }
           },
           missDistance: {
-            astronomical:
-              Math.round(closeApproachData.miss_distance.astronomical * 100) /
-              100,
-            lunar:
-              Math.round(closeApproachData.miss_distance.lunar * 100) / 100,
-            kilometers: formatNumber(
-              Math.round(closeApproachData.miss_distance.kilometers)
+            astronomical: formatNumber(
+              closeApproachData.miss_distance.astronomical
             ),
-            miles: formatNumber(
-              Math.round(closeApproachData.miss_distance.miles)
-            )
+            lunar: formatNumber(closeApproachData.miss_distance.lunar),
+            kilometers: formatNumber(
+              closeApproachData.miss_distance.kilometers
+            ),
+            miles: formatNumber(closeApproachData.miss_distance.miles)
           },
           isLoaded: true
         });
-        console.log(asteroid);
       });
   }
 }

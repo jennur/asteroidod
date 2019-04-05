@@ -5,7 +5,12 @@
   max-width: 600px;
   height: auto;
   font-size: var(--fontSizeSmall);
-  border-radius: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+  .c-text-box {
+    border-radius: 5px;
+  }
 }
 
 .c-text-box p {

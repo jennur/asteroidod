@@ -1,12 +1,12 @@
 .todays-asteroid-wrapper {
   display: block;
   max-width: 600px;
+  margin-bottom: var(--spacingSmall);
 }
 
 @media only screen and (min-width: 768px) {
   .todays-asteroid-wrapper {
     border-radius: 5px;
-    width: 550px;
   }
 }
 

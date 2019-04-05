@@ -91,6 +91,20 @@ footer {
   color: var(--colorBlack);
 }
 
+.accordion-section__title::after {
+  content: "▼";
+  float: right;
+  font-size: var(--fontSizeSmall);
+}
+
+.accordion-section__title:hover {
+  cursor: pointer;
+}
+
+.accordion-section__content {
+  padding-bottom: var(--spacingSmall);
+}
+
 .asteroid__details {
   width: 100%;
   max-width: 600px;
@@ -164,6 +178,13 @@ footer {
 .button a:hover {
   background-color: var(--colorYellow);
   color: var(--colorBlack);
+}
+
+#asteroidCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 
@@ -409,7 +430,12 @@ fieldset{
   max-width: 600px;
   height: auto;
   font-size: var(--fontSizeSmall);
-  border-radius: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+  .c-text-box {
+    border-radius: 5px;
+  }
 }
 
 .c-text-box p {
@@ -445,12 +471,12 @@ fieldset{
 .todays-asteroid-wrapper {
   display: block;
   max-width: 600px;
+  margin-bottom: var(--spacingSmall);
 }
 
 @media only screen and (min-width: 768px) {
   .todays-asteroid-wrapper {
     border-radius: 5px;
-    width: 550px;
   }
 }
 
@@ -543,6 +569,11 @@ fieldset{
   flex-direction: column;
   width: 100%;
   align-items: center;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 600px;
 }
 
 /* Elements */
