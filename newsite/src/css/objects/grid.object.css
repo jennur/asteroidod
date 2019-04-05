@@ -1,12 +1,11 @@
-
 .flex-wrap {
-    display: flex; 
-    flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .align-center {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   width: 100%;
-  align-items: center; 
+  align-items: center;
 }

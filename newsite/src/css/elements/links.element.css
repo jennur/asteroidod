@@ -1,4 +1,21 @@
-
 a {
   text-decoration: none;
+  color: var(--colorBlue);
+  padding-bottom: var(--spacingSmall);
+  padding-left: 0;
+  transition: 0.3s;
+}
+
+a:hover {
+  padding-left: var(--spacingLarge);
+  color: var(--colorYellow);
+}
+
+p a {
+  padding-bottom: 0;
+  padding-left: 0;
+}
+p a:hover {
+  padding-bottom: 0;
+  padding-left: 0;
 }

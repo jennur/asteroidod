@@ -1,6 +1,7 @@
 import React from "react";
 import Loading from "../components/Loading";
-import TodaysAsteroid from "../components/TodaysAsteroid";
+import AsteroidDataBlock from "../components/AsteroidDataBlock";
+import AccordionSection from "../components/AccordionSection";
 
 class Details extends React.Component {
   constructor(props) {
@@ -32,36 +33,69 @@ class Details extends React.Component {
   }
   render() {
     let details = this.state.isLoaded ? this.renderDetails() : <Loading />;
+    let closeApproachData = this.state.isLoaded
+      ? this.renderCloseApproachDates()
+      : "";
     return (
       <main>
-        <h2>Asteroid Details</h2>
         {details}
-        <h2>Close Approach Dates</h2>
+        {closeApproachData}
       </main>
     );
   }
   renderDetails() {
     let asteroid = this.state;
     return (
-      <div>
-        <TodaysAsteroid
+      <section className="asteroid__details">
+        <h2>Asteroid Details</h2>
+        <AsteroidDataBlock
+          transparent={false}
           asteroidName={asteroid.asteroidName}
-          approachDate={asteroid.approachDate}
           absoluteMagnitude={asteroid.absoluteMagnitude}
-          diameterMetersMax={asteroid.diameter.meters.max}
-          diameterMetersMin={asteroid.diameter.meters.max}
-          diameterFeetMax={asteroid.diameter.feet.max}
-          diameterFeetMin={asteroid.diameter.feet.min}
-          missDistanceAstronomical={asteroid.missDistance.astronomical}
-          missDistanceLunar={asteroid.missDistance.lunar}
-          missDistanceKilometers={asteroid.missDistance.kilometers}
-          missDistanceMiles={asteroid.missDistance.miles}
+          diameter={{
+            meters: {
+              max: asteroid.diameter.meters.max,
+              min: asteroid.diameter.meters.min
+            },
+            feet: {
+              max: asteroid.diameter.feet.max,
+              min: asteroid.diameter.feet.min
+            }
+          }}
         />
-      </div>
+      </section>
     );
   }
   renderCloseApproachDates() {
     let closeApproachData = this.state.closeApproachData;
+
+    let accordionSections = [];
+
+    closeApproachData.forEach((element, key) => {
+      accordionSections.push(this.renderAccordionSections(element, key));
+    });
+
+    return (
+      <section className="asteroid__close-approach-data">
+        <h2>{closeApproachData.length} known close approach dates </h2>
+        <div className="accordion">{accordionSections}</div>
+      </section>
+    );
+  }
+  renderAccordionSections(element, key) {
+    return (
+      <AccordionSection key={key} title={element.close_approach_date}>
+        <AsteroidDataBlock
+          transparent={true}
+          missDistance={{
+            astronomical: element.miss_distance.astronomical,
+            lunar: element.miss_distance.lunar,
+            kilometers: element.miss_distance.kilometers,
+            miles: element.miss_distance.miles
+          }}
+        />
+      </AccordionSection>
+    );
   }
   componentDidMount() {
     let apiKey = "sl1hP0MUGkJLn8tw2qXsxb6235u91ndRBDuD0O2d";
@@ -78,12 +112,11 @@ class Details extends React.Component {
       })
       .then(data => {
         let asteroid = data;
-        let closeApproachData = asteroid.close_approach_data[0];
+        let closeApproachData = asteroid.close_approach_data;
 
         this.setState({
           closeApproachData: closeApproachData,
           asteroidName: asteroid.name,
-          approachDate: closeApproachData.close_approach_date,
           absoluteMagnitude: Math.round(asteroid.absolute_magnitude_h),
           diameter: {
             meters: {
@@ -109,18 +142,9 @@ class Details extends React.Component {
                 ) / 100
             }
           },
-          missDistance: {
-            astronomical:
-              Math.round(closeApproachData.miss_distance.astronomical * 100) /
-              100,
-            lunar:
-              Math.round(closeApproachData.miss_distance.lunar * 100) / 100,
-            kilometers: Math.round(closeApproachData.miss_distance.kilometers),
-            miles: Math.round(closeApproachData.miss_distance.miles)
-          },
+
           isLoaded: true
         });
-        console.log(closeApproachData);
       });
   }
 }

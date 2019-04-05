@@ -1,9 +1,11 @@
 .burger-menu {
-  display: block;
-  height: 24px;
-  margin: var(--spacingMedium);
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  margin-top: var(--spacingMedium);
 }
-@media only screen and (min-width: 768px) {
+
+@media only screen and (min-width: 1025px) {
   .burger-menu {
     display: none;
   }
@@ -11,10 +13,14 @@
 
 .burger-menu__burger {
   display: block;
-  width: 48px;
+  width: 40px;
   height: 30px;
   float: right;
   z-index: 999;
+}
+
+.burger-menu__burger:hover {
+  cursor: pointer;
 }
 
 .burger-menu__burger span {
@@ -26,11 +32,14 @@
   margin-bottom: 7px;
   background-color: var(--colorYellow);
 }
+
 .burger-menu__navigation {
   position: absolute;
-  top: 100px;
+  top: 60px;
   left: 0;
-  width: 100%;
+  min-width: 100%;
+  min-height: 800px;
   padding-left: var(--spacingMedium);
   background-color: var(--colorBlackTransparent);
+  z-index: 999;
 }

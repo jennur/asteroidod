@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import "./css/main.css";
-import dateFormat from "./js/dateFormat";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Details from "./pages/Details";
@@ -19,16 +18,14 @@ class App extends React.Component {
         <HashRouter>
           <div>
             <Header />
-            <div className="flex-wrap">
-              <Navigation isBurgerMenu={false} />
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/details" component={Details} />
-                <Route exact path="/approaching" component={Approaching} />
-                <Route exact path="/contact" component={Contact} />
-              </Switch>
-            </div>
+            <Navigation isBurgerMenu={false} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/details" component={Details} />
+              <Route exact path="/approaching" component={Approaching} />
+              <Route exact path="/contact" component={Contact} />
+            </Switch>
             <Footer />
           </div>
         </HashRouter>

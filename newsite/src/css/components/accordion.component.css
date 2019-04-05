@@ -1,0 +1,13 @@
+.accordion {
+}
+
+.accordion-section {
+}
+
+.accordion-section__title {
+  padding: var(--spacingSmall);
+  background-color: var(--colorYellow);
+  margin-bottom: var(--spacingSmall);
+  border-radius: 5px;
+  color: var(--colorBlack);
+}

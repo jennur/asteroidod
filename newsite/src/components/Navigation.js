@@ -11,50 +11,68 @@ class Navigation extends React.Component {
   constructor(props) {
     super(props);
     this.props.isBurgerMenu;
+    this.state = {
+      showText: false
+    };
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
   }
   render() {
     return (
       <nav className="c-main-nav-wrapper">
-        <ul className="c-main-nav">
+        <ul
+          className="c-main-nav"
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
+        >
           <li className="c-main-nav__item">
             <Link className="c-main-nav__item--link" to="/">
               <img className="c-main-nav__icon" src={sun} />
+              {this.state.showText ? "Home" : null}
             </Link>
-            {this.props.isBurgerMenu ? "Home" : null}
           </li>
           <li className="c-main-nav__item">
             <Link className="c-main-nav__item--link" to="/details">
               <img className="c-main-nav__icon" src={mercury} />
+              {this.state.showText ? "Asteroid Details" : null}
             </Link>
-            {this.props.isBurgerMenu ? "Asteroid Details" : null}
           </li>
           <li className="c-main-nav__item">
             <Link className="c-main-nav__item--link" to="/approaching">
               <img className="c-main-nav__icon" src={venus} />
+              {this.state.showText ? "Approaching Asteroids" : null}
             </Link>
-            {this.props.isBurgerMenu ? "Approaching Asteroids" : null}
           </li>
           <li className="c-main-nav__item">
             <Link className="c-main-nav__item--link" to="/well-known-asteroids">
               <img className="c-main-nav__icon" src={earth} />
+              {this.state.showText ? "Well Known Asteroids" : null}
             </Link>
-            {this.props.isBurgerMenu ? "Well Known Asteroids" : null}
           </li>
           <li className="c-main-nav__item">
             <Link className="c-main-nav__item--link" to="/about">
               <img className="c-main-nav__icon" src={jupiter} />
+              {this.state.showText ? "About AsteroidOD" : null}
             </Link>
-            {this.props.isBurgerMenu ? "About AsteroidOD" : null}
           </li>
           <li className="c-main-nav__item">
             <Link className="c-main-nav__item--link" to="/contact">
               <img className="c-main-nav__icon" src={mars} />
+              {this.state.showText ? "Contact" : null}
             </Link>
-            {this.props.isBurgerMenu ? "Contact" : null}
           </li>
         </ul>
       </nav>
     );
+  }
+  componentDidMount() {
+    this.props.isBurgerMenu ? this.setState({ showText: true }) : false;
+  }
+  handleMouseEnter() {
+    this.setState({ showText: true });
+  }
+  handleMouseLeave() {
+    this.setState({ showText: false });
   }
 }
 

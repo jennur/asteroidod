@@ -1,23 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
-@import url("https://fonts.googleapis.com/css?family=B612+Mono");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 
 :root {
   /* Fonts */
   --headerFont: "Major Mono Display", monospace;
-  --bodyFont: "B612 Mono", monospace;
+  --bodyFont: "Inconsolata", monospace;
 
   /* Font Sizes */
-  --fontSizeRoot: 16px;
-  --fontSizeSmall: 0.8em;
-  --fontSizeMedium: 1.5em;
-  --fontSizeLarge: 2em;
-  --fontSizeXL: 2.5em;
+  --fontSizeRootMobile: 16px;
+  --fontSizeRoot: 20px;
+  --fontSizeSmall: 0.8rem;
+  --fontSizeMedium: 1.2rem;
+  --fontSizeLarge: 1.5rem;
+  --fontSizeXL: 2rem;
 
   /* Colors */
 
   --colorBlack: #000;
   --colorBlackTransparent: rgba(0, 0, 0, 0.9);
-  --colorWhite: #fff;
+  --colorWhite: #eee;
   --colorYellow: #ffef00;
   --colorBlue: #2b7f99;
 
@@ -30,11 +31,6 @@
 
   /* Screen sizes */
 
-  --tabletWidth: 768px;
+  --tabletWidth: 1024px;
   --desktopWidth: 1280px;
-
-  /* Media Queries */
-
-  @custom-media --tablet (min-width: 768px);
-  @custom-media --desktop (min-width: 1280px);
 }

@@ -5,24 +5,17 @@ html {
   font-family: var(--bodyFont);
 }
 
-header {
-  display: flex;
-  width: 100%;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
-}
-
 main {
-  flex-basis: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   letter-spacing: -0.5px;
+  max-width: 700px;
+  min-height: 550px;
 }
 
 nav {
-  flex-basis: 20%;
   margin: 0;
 }
 
@@ -32,4 +25,15 @@ footer {
   align-items: center;
   font-size: var(--fontSizeSmall);
   color: var(--colorWhite);
+}
+
+.layout-adjust {
+  display: block;
+  flex-basis: 20%;
+  height: 120px;
+}
+@media only screen and (max-width: 1024px) {
+  .layout-adjust {
+    display: none;
+  }
 }

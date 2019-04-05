@@ -1,0 +1,17 @@
+.header {
+  min-height: 120px;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1025px) {
+  .header {
+    justify-content: flex-start;
+    flex-basis: 80%;
+    margin-top: var(--spacingMedium);
+  }
+  .header__headline {
+    margin: var(--spacingMedium) 0px var(--spacingLarge) 0px;
+  }
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import dateFormat from "../js/dateFormat";
-import TodaysAsteroid from "../components/TodaysAsteroid";
+import formatNumber from "../js/formatNumber";
 import Loading from "../components/Loading";
 import { Link } from "react-router-dom";
+import AsteroidDataBlock from "../components/AsteroidDataBlock";
 
 class Home extends React.Component {
   constructor(props) {
@@ -33,36 +34,55 @@ class Home extends React.Component {
     };
   }
   render() {
-    let loading = <Loading />;
+    let loading = (
+      <main>
+        <Loading />
+      </main>
+    );
     let content = this.state.isLoaded ? this.renderContent() : loading;
-    return <main>{content}</main>;
+    return content;
   }
   renderContent() {
     let asteroid = this.state;
 
     return (
-      <div>
-        <TodaysAsteroid
+      <main>
+        <AsteroidDataBlock
+          transparent={true}
           asteroidName={asteroid.asteroidName}
           approachDate={asteroid.approachDate}
           absoluteMagnitude={asteroid.absoluteMagnitude}
-          diameterMetersMax={asteroid.diameter.meters.max}
-          diameterMetersMin={asteroid.diameter.meters.max}
-          diameterFeetMax={asteroid.diameter.feet.max}
-          diameterFeetMin={asteroid.diameter.feet.min}
-          missDistanceAstronomical={asteroid.missDistance.astronomical}
-          missDistanceLunar={asteroid.missDistance.lunar}
-          missDistanceKilometers={asteroid.missDistance.kilometers}
-          missDistanceMiles={asteroid.missDistance.miles}
+          diameter={{
+            meters: {
+              max: asteroid.diameter.meters.max,
+              min: asteroid.diameter.meters.min
+            },
+            feet: {
+              max: asteroid.diameter.feet.max,
+              min: asteroid.diameter.feet.min
+            }
+          }}
+          missDistance={{
+            astronomical: asteroid.missDistance.astronomical,
+            lunar: asteroid.missDistance.lunar,
+            kilometers: asteroid.missDistance.kilometers,
+            miles: asteroid.missDistance.miles
+          }}
         />
-        <Link to="/details">See all approach dates</Link>
+        <div className="align-center ">
+          <span className="button">
+            <Link to="/details">See all close approach dates</Link>
+          </span>
 
-        <h2>
-          There are
-          <span className="numNeos"> {asteroid.numNeos} </span>
-          more near asteroids atm
-        </h2>
-      </div>
+          <h2>
+            <Link to="/approaching">
+              There are
+              {" " + asteroid.numNeos + " "}
+              more near asteroids atm >
+            </Link>
+          </h2>
+        </div>
+      </main>
     );
   }
   componentDidMount() {
@@ -91,26 +111,30 @@ class Home extends React.Component {
           absoluteMagnitude: Math.round(asteroid.absolute_magnitude_h),
           diameter: {
             meters: {
-              max:
+              max: formatNumber(
                 Math.round(
                   asteroid.estimated_diameter.meters.estimated_diameter_max *
                     100
-                ) / 100,
-              min:
+                ) / 100
+              ),
+              min: formatNumber(
                 Math.round(
                   asteroid.estimated_diameter.meters.estimated_diameter_min *
                     100
                 ) / 100
+              )
             },
             feet: {
-              max:
+              max: formatNumber(
                 Math.round(
                   asteroid.estimated_diameter.feet.estimated_diameter_max * 100
-                ) / 100,
-              min:
+                ) / 100
+              ),
+              min: formatNumber(
                 Math.round(
                   asteroid.estimated_diameter.feet.estimated_diameter_min * 100
                 ) / 100
+              )
             }
           },
           missDistance: {
@@ -119,8 +143,12 @@ class Home extends React.Component {
               100,
             lunar:
               Math.round(closeApproachData.miss_distance.lunar * 100) / 100,
-            kilometers: Math.round(closeApproachData.miss_distance.kilometers),
-            miles: Math.round(closeApproachData.miss_distance.miles)
+            kilometers: formatNumber(
+              Math.round(closeApproachData.miss_distance.kilometers)
+            ),
+            miles: formatNumber(
+              Math.round(closeApproachData.miss_distance.miles)
+            )
           },
           isLoaded: true
         });

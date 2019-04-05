@@ -1,0 +1,18 @@
+.button {
+  margin: var(--spacingXLarge) var(--spacingMedium) var(--spacingMedium)
+    var(--spacingMedium);
+}
+
+.button a {
+  display: block;
+  width: max-content;
+  border: 2px solid var(--colorYellow);
+  padding: var(--spacingSmall);
+  color: var(--colorYellow);
+  transition: 0.3s;
+}
+
+.button a:hover {
+  background-color: var(--colorYellow);
+  color: var(--colorBlack);
+}

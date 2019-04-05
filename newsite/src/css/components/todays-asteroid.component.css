@@ -1,13 +1,30 @@
 .todays-asteroid-wrapper {
   display: block;
-  width: 90%;
-  max-width: var(--tabletWidth);
-  background-color: var(--colorBlue);
-  border-radius: 5px;
+  max-width: 600px;
 }
 
-.todays-asteroid {
-  padding: var(--spacingLarge) var(--spacingMedium);
+@media only screen and (min-width: 768px) {
+  .todays-asteroid-wrapper {
+    border-radius: 5px;
+    width: 550px;
+  }
+}
+
+.todays-asteroid-wrapper--blue {
+  background-color: var(--colorBlue);
+  padding: var(--spacingMedium);
+}
+
+.todays-asteroid-wrapper--blue .todays-asteroid__details {
+  color: var(--colorBlack);
+}
+
+.todays-asteroid-wrapper--transparent {
+  background-color: transparent;
+}
+
+.todays-asteroid-wrapper--transparent .todays-asteroid__details {
+  color: var(--colorBlue);
 }
 
 .todays-asteroid a {
@@ -20,16 +37,20 @@
   border-bottom: 1px solid var(--colorBlack);
 }
 
-.todays-asteroid__name {
+.todays-asteroid__data {
   display: block;
-  width: max-content;
-  color: var(--colorBlack);
-  font-family: var(--headerFont);
-  font-size: var(--fontSizeLarge);
-  padding: var(--spacingMedium);
-  margin: 0 auto;
+  font-family: var(--bodyFont);
+  font-size: var(--fontSizeMedium);
+  color: var(--colorWhite);
 }
 
 .todays-asteroid__details {
-  color: var(--colorWhite);
+  list-style: none;
+  color: var(--colorBlue);
+  padding: 0;
+  margin: 0;
+}
+
+.todays-asteroid__details li {
+  padding: var(--spacingSmall);
 }

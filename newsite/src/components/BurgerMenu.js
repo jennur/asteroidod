@@ -25,7 +25,7 @@ class BurgerMenu extends React.Component {
   }
   renderNav() {
     return this.state.isClicked ? (
-      <div className="burger-menu__navigation">
+      <div className="burger-menu__navigation" onClick={this.handleClick}>
         <Navigation isBurgerMenu={true} />
       </div>
     ) : null;
