@@ -85,7 +85,7 @@ footer {
 
 .accordion-section__title {
   padding: var(--spacingSmall);
-  background-color: var(--colorYellow);
+  background-color: var(--colorYellowTransparent);
   margin-bottom: var(--spacingSmall);
   border-radius: 5px;
   color: var(--colorBlack);
@@ -115,10 +115,31 @@ footer {
   max-width: 600px;
 }
 
+#background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -999;
+}
+#filter {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -99;
+}
+
 .burger-menu {
   display: flex;
   justify-content: flex-end;
-  flex-basis: 100%;
+  flex-basis: 15%;
   margin-top: var(--spacingMedium);
 }
 
@@ -130,8 +151,8 @@ footer {
 
 .burger-menu__burger {
   display: block;
-  width: 40px;
-  height: 30px;
+  width: 35px;
+  height: 22px;
   float: right;
   z-index: 999;
 }
@@ -143,7 +164,7 @@ footer {
 .burger-menu__burger span {
   display: block;
   width: 100%;
-  height: 4px;
+  height: 3px;
   border-radius: 2px;
   padding: 0;
   margin-bottom: 7px;
@@ -151,14 +172,14 @@ footer {
 }
 
 .burger-menu__navigation {
-  position: absolute;
-  top: 60px;
+  position: fixed;
+  top: 0;
   left: 0;
   min-width: 100%;
   min-height: 800px;
   padding-left: var(--spacingMedium);
   background-color: var(--colorBlackTransparent);
-  z-index: 999;
+  z-index: 99;
 }
 
 .button {
@@ -178,13 +199,6 @@ footer {
 .button a:hover {
   background-color: var(--colorYellow);
   color: var(--colorBlack);
-}
-
-#asteroidCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
 }
 
 
@@ -306,10 +320,18 @@ fieldset{
     border: 0.01rem solid red !important;
   }
 .header {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
   min-height: 120px;
   margin: 0 auto;
   max-width: 600px;
   text-align: center;
+}
+
+.header__headline {
+  flex-basis: 85%;
+  font-size: var(--fontSizeLarge);
 }
 
 @media only screen and (min-width: 1025px) {
@@ -320,12 +342,20 @@ fieldset{
   }
   .header__headline {
     margin: var(--spacingMedium) 0px var(--spacingLarge) 0px;
+    font-size: var(--fontSizeXL);
+    flex-basis: 100%;
   }
 }
 
 @media only screen and (min-width: 1025px) {
   .c-main-nav-wrapper {
-    display: flex;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    background-image: linear-gradient(to right, var(--colorBlack), transparent);
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -342,18 +372,20 @@ fieldset{
 }
 
 .burger-menu .c-main-nav {
-  top: 0;
+  top: 20px;
 }
 .c-main-nav {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 100px;
   color: var(--colorYellow);
   list-style: none;
   padding: 0;
   margin: 0;
-  background-image: linear-gradient(to right, var(--colorBlack), transparent);
   width: 50px;
+}
+.c-main-nav-wrapper:hover {
+  width: 700px;
 }
 .c-main-nav:hover {
   width: 700px;
@@ -443,7 +475,7 @@ fieldset{
 }
 
 .c-text-box--blue {
-  background-color: var(--colorBlue);
+  background-color: var(--colorBlueTransparent);
   color: var(--colorWhite);
 }
 
@@ -481,7 +513,7 @@ fieldset{
 }
 
 .todays-asteroid-wrapper--blue {
-  background-color: var(--colorBlue);
+  background-color: var(--colorBlueTransparent);
   padding: var(--spacingMedium);
 }
 
@@ -544,7 +576,9 @@ fieldset{
   --colorBlackTransparent: rgba(0, 0, 0, 0.9);
   --colorWhite: #eee;
   --colorYellow: #ffef00;
+  --colorYellowTransparent: rgba(255, 239, 0, 0.7);
   --colorBlue: #2b7f99;
+  --colorBlueTransparent: rgba(43, 127, 153, 0.7);
 
   /* Spacing */
 
