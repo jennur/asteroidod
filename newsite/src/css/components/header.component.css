@@ -1,7 +1,13 @@
+.header-content-space {
+  /* To make everything stay in place when sticky-class is added*/
+  display: block;
+  width: 100%;
+  height: 120px;
+}
 .header-wrapper {
   display: block;
   width: 100%;
-  transition: 0.2s;
+  height: 120px;
 }
 .header {
   display: flex;
@@ -15,7 +21,7 @@
 
 .header__headline {
   flex-basis: 85%;
-  font-size: var(--fontSizeLarge);
+  font-size: var(--fontSizeMedium);
   transition: 0.3s;
 }
 .header--sticky {
@@ -43,5 +49,8 @@
     margin: var(--spacingMedium) 0px var(--spacingLarge) 0px;
     font-size: var(--fontSizeXL);
     flex-basis: 100%;
+  }
+  .header--sticky .header__headline {
+    font-size: var(--fontSizeLarge);
   }
 }

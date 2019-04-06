@@ -16,7 +16,8 @@
 }
 
 .burger-menu .c-main-nav {
-  min-width: 400px;
+  width: 100%;
+  text-align: left;
 }
 .burger-menu .c-main-nav-wrapper {
   display: flex;

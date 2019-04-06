@@ -151,6 +151,7 @@ footer {
   justify-content: flex-end;
   flex-basis: 15%;
   margin-top: var(--spacingMedium);
+  transition: 0.3s;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -329,10 +330,16 @@ fieldset{
   .error{
     border: 0.01rem solid red !important;
   }
+.header-content-space {
+  /* To make everything stay in place when sticky-class is added*/
+  display: block;
+  width: 100%;
+  height: 120px;
+}
 .header-wrapper {
   display: block;
   width: 100%;
-  transition: 0.2s;
+  height: 120px;
 }
 .header {
   display: flex;
@@ -346,7 +353,7 @@ fieldset{
 
 .header__headline {
   flex-basis: 85%;
-  font-size: var(--fontSizeLarge);
+  font-size: var(--fontSizeMedium);
   transition: 0.3s;
 }
 .header--sticky {
@@ -375,6 +382,9 @@ fieldset{
     font-size: var(--fontSizeXL);
     flex-basis: 100%;
   }
+  .header--sticky .header__headline {
+    font-size: var(--fontSizeLarge);
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -395,7 +405,8 @@ fieldset{
 }
 
 .burger-menu .c-main-nav {
-  min-width: 400px;
+  width: 100%;
+  text-align: left;
 }
 .burger-menu .c-main-nav-wrapper {
   display: flex;

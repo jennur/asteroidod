@@ -4,11 +4,13 @@ import BurgerMenu from "./BurgerMenu";
 class Header extends React.Component {
   render() {
     return (
-      <div className="header-wrapper">
-        <header className="header">
-          <h1 className="header__headline">Asteroid of the Day</h1>
-          <BurgerMenu />
-        </header>
+      <div className="header-content-space">
+        <div className="header-wrapper">
+          <header className="header">
+            <h1 className="header__headline">Asteroid of the Day</h1>
+            <BurgerMenu />
+          </header>
+        </div>
       </div>
     );
   }

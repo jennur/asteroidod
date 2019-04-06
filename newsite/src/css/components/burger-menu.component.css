@@ -3,6 +3,7 @@
   justify-content: flex-end;
   flex-basis: 15%;
   margin-top: var(--spacingMedium);
+  transition: 0.3s;
 }
 
 @media only screen and (min-width: 1025px) {
