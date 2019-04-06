@@ -15,6 +15,7 @@
 @import "./components//loading.component.css";
 @import "./components/textbox.component.css";
 @import "./components/todays-asteroid.component.css";
+@import "./components/visited-asteroid.component.css";
 
 /* Settings */
 @import "./settings/variables.settings.css";

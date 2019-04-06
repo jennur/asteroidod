@@ -6,6 +6,7 @@ class AsteroidDataBlock extends React.Component {
     this.renderName = this.renderName.bind(this);
     this.renderAbsoluteMagnitude = this.renderAbsoluteMagnitude.bind(this);
     this.renderApproachDate = this.renderApproachDate.bind(this);
+    this.renderIsHazardous = this.renderIsHazardous.bind(this);
     this.renderMissDistance = this.renderMissDistance.bind(this);
     this.renderDiameter = this.renderDiameter.bind(this);
     this.renderOrbitingBody = this.renderOrbitingBody.bind(this);
@@ -17,7 +18,7 @@ class AsteroidDataBlock extends React.Component {
     let approachDate = this.props.approachDate
       ? this.renderApproachDate()
       : null;
-
+    let isHazardous = this.props.isHazardous ? this.renderIsHazardous() : null;
     let missDistance = this.props.missDistance
       ? this.renderMissDistance()
       : null;
@@ -52,6 +53,7 @@ class AsteroidDataBlock extends React.Component {
             {missDistance}
             {diameter}
             {velocity}
+            {isHazardous}
           </ul>
         </div>
       </div>
@@ -72,6 +74,15 @@ class AsteroidDataBlock extends React.Component {
         <span className="todays-asteroid__data">
           {this.props.absoluteMagnitude}
         </span>
+      </li>
+    );
+  }
+  renderIsHazardous() {
+    return (
+      <li>
+        This asteroid is
+        {this.props.isHazardous}
+        <b>potentially</b> hazardous.
       </li>
     );
   }

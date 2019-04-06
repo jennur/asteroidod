@@ -15,6 +15,7 @@ class Home extends React.Component {
       asteroidName: "",
       approachDate: "",
       absoluteMagnitude: "",
+      isHazardous: "",
       diameter: {
         meters: {
           max: "",
@@ -52,6 +53,7 @@ class Home extends React.Component {
           asteroidName={asteroid.asteroidName}
           approachDate={asteroid.approachDate}
           absoluteMagnitude={asteroid.absoluteMagnitude}
+          isHazardous={asteroid.isHazardous}
           diameter={{
             meters: {
               max: asteroid.diameter.meters.max,
@@ -105,10 +107,13 @@ class Home extends React.Component {
         let closeApproachData = asteroid.close_approach_data[0];
 
         this.setState({
-          numNeos: data.element_count,
+          numNeos: data.element_count - 1,
           asteroidName: asteroid.name,
           approachDate: closeApproachData.close_approach_date,
           absoluteMagnitude: asteroid.absolute_magnitude_h,
+          isHazardous: asteroid.is_potentially_hazardous_asteroid
+            ? ""
+            : " not ",
           diameter: {
             meters: {
               max: formatNumber(

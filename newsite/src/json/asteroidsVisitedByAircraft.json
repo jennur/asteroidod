@@ -1,0 +1,129 @@
+{
+  "asteroidsVisitedByAircrafts": [
+    {
+      "name": "1 Ceres",
+      "imageUrl": "assets/visitedAsteroids/ceres-dawn.jpg",
+      "description": [
+        "Ceres was the first asteroid to be discovered in 1801 by the Italian",
+        "astronomer Giuseppe Piazzi. It was at that time considered to be a new planet,",
+        "but was later reclassified as an asteroid only to be reclassified again in",
+        "2006 as a dwarf planet. Ceres has a diameter approximately",
+        "950 km (590 miles), and is thereby the biggest object in the asteroid belt.",
+        "<br/>",
+        "<br/>",
+        "The spacecraft <a href='https://dawn.jpl.nasa.gov/' target='_blank' title='Opens in new tab'>Dawn</a> (launched September 27, 2007)",
+        "visited Ceres in 2015 after its mission to Vesta."
+      ]
+    },
+    {
+      "name": "4 Vesta",
+      "imageUrl": "assets/visitedAsteroids/vesta-dawn.jpg",
+      "description": [
+        "Vesta is the second most massive (but not the second largest - Pallas is the second largest by volume)",
+        "asteroid in the asteroid belt. It was discovered in 1807 by Heinrich Wilhelm Olbers, and was the fourth asteroid",
+        "to be discovered.",
+        "<br/>",
+        "<br/>",
+        "Vesta's longest diameter is about 530 km (329 miles), and it has the shape of a",
+        "smooshed sphere.",
+        "<br/>",
+        "<br/>",
+        "<a href='https://dawn.jpl.nasa.gov/' target='_blank' title='Opens in new tab'>Dawn</a> arrived at Vesta in July 2011."
+      ]
+    },
+    {
+      "name": "21 Lutetia",
+      "imageUrl": "assets/visitedAsteroids/lutetia-rosetta.jpg",
+      "description": [
+        "Lutetia was discovered in 1852 by Hermann Mayer Salomon Goldschmidt in France.",
+        "It has an irregular shape where the longest diameter is about 132 km, while the smallest",
+        "measures about 76 km.",
+        "<br/>",
+        "<br/>",
+        "In July 2010, <a href='https://www.esa.int/ESA' target='_blank' title='Opens in new tab'>ESA</a>'s <a href='http://sci.esa.int/rosetta/' target='_blank' title='Opens in new tab'>Rosetta</a>",
+        "spacecraft flew by Lutetia on its way to the",
+        "comet <a href='http://www.esa.int/Our_Activities/Space_Science/Rosetta/Comet_67P_Churyumov-Gerasimenko' target='_blank' title='Opens in new tab'>67P/Churyumov-Gerasimenko</a>."
+      ]
+    },
+    {
+      "name": "243 Ida",
+      "imageUrl": "assets/visitedAsteroids/ida-and-dactyl-galileo.jpg",
+      "description": [
+        "243 Ida was discovered in 1884 by Johann Palisa, an Austrian astronomer, in Vienna.",
+        "At the time it was not known that Ida had its own moon. The moon, today known as Dactyl, was not discovered until",
+        "100 years later, in 1993, when Ida became the second asteroid to be visited by a spacecraft.",
+        "<br/>",
+        "<br/>",
+        "On August 29, 1993 <a href='https://www.jpl.nasa.gov/missions/galileo/' target='_blank' title='Opens in new tab'>Galileo</a> flew by Ida on its way to Jupiter after it passed",
+        "Gaspra two years before."
+      ]
+    },
+    {
+      "name": "253 Mathilde",
+      "imageUrl": "assets/visitedAsteroids/mathilde-near.jpg",
+      "description": [
+        "Mathilde was discovered in 1885 by Johann Palisa. Its diameter is about 52 km (32 miles)",
+        "and because of its high concentration of carbon, the asteroid is very dark - it reflects",
+        "only 4 percent of all incoming light.",
+        "<br/>",
+        "<br/>",
+        "In 1997 <a href='https://solarsystem.nasa.gov/missions/near-shoemaker/in-depth/' target='_blank' title='Opens in new tab'>NEAR</a>",
+        "flew by Mathilde on its way to the asteroid 433 Eros."
+      ]
+    },
+    {
+      "name": "433 Eros",
+      "imageUrl": "assets/visitedAsteroids/eros-near.jpg",
+      "description": [
+        "Eros was discovered in 1898 by both Gustav Witt in Germany and Auguste H.P",
+        "Charlois in France (independently of each other). It was the first Near Earth asteroid",
+        "to be discovered, and also the first asteroid to be orbited by a spacecraft.",
+        "<br/>",
+        "<br/>",
+        "<a href='https://solarsystem.nasa.gov/missions/near-shoemaker/in-depth/' target='_blank' title='Opens in new tab'>NEAR</a> flew by Eros in December 1998 where it",
+        "moved into orbit 2 years after its arrival.",
+        "After a year in orbit, the spacecraft finally performed the very first landing on",
+        "an asteroid."
+      ]
+    },
+    {
+      "name": "951 Gaspra",
+      "imageUrl": "assets/visitedAsteroids/gaspra-galileo.jpg",
+      "description": [
+        "Gaspra was discovered in 1916 by Grigoriy N. Neujamin. Gaspras largest diameter",
+        "is about 20 km (12.5 miles). It was given very little attention until",
+        "<a href='https://www.jpl.nasa.gov/missions/galileo/' target='_blank' title='Opens in new tab'>Galileo's</a>",
+        "trajectory was discovered to be close to the asteroid.",
+        "<br/>",
+        "<br/>",
+        "In 1991, Galileo flew by Gaspra as the first spacecraft to fly by an asteroid before it later",
+        "flew by 243 Ida in 1993 and finally reached Jupiter in 1995."
+      ]
+    },
+    {
+      "name": "4179 Toutatis",
+      "imageUrl": "",
+      "description": ""
+    },
+    {
+      "name": "5535 Annefrank",
+      "imageUrl": "",
+      "description": ""
+    },
+    {
+      "name": "2867 Šteins",
+      "imageUrl": "",
+      "description": ""
+    },
+    {
+      "name": "9969 Braille",
+      "imageUrl": "",
+      "description": ""
+    },
+    {
+      "name": "",
+      "imageUrl": "",
+      "description": ""
+    }
+  ]
+}

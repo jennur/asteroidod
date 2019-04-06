@@ -1,0 +1,37 @@
+.asteroids-visited-by-aircrafts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 100%;
+}
+.asteroids-visited-by-aircrafts__headline {
+  flex-basis: 100%;
+}
+.visited-asteroid-wrapper {
+  display: block;
+  width: 250px;
+  background-color: var(--colorBlackTransparent);
+  border: 1px solid var(--colorBlueTransparent);
+  margin: 0px var(--spacingMedium) var(--spacingMedium) 0px;
+  padding: 0px var(--spacingLarge) var(--spacingLarge) var(--spacingLarge);
+}
+.visited-asteroid-wrapper--full-width {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+.visited-asteroid__image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid var(--colorBlue);
+  margin-bottom: var(--spacingMedium);
+}
+.visited-asteroid__text {
+  font-size: var(--fontSizeSmall);
+}
+
+.visited-asteroid__text a:hover {
+  padding-left: 0px;
+}

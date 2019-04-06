@@ -11,4 +11,5 @@ h2 {
 
 h3 {
   font-size: var(--fontSizeMedium);
+  font-family: var(--headerFont);
 }
