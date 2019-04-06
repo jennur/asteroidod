@@ -1,3 +1,10 @@
+import potentiallyHazardousImage from "../../assets/asteroidImages/potentially-hazardous-asteroids.jpg";
+import idaAndDactyl from "../../assets/asteroidImages/ida-and-dactyl-galileo.jpg";
+import theSnowman from "../../assets/asteroidImages/the-snowman-vesta.jpg";
+import ceresJulingCrater from "../../assets/asteroidImages/ceres-juling-crater-dawn.jpg";
+import ceresCrater from "../../assets/asteroidImages/ceres-craters-dawn.jpg";
+import hubble from "../../assets/asteroidImages/hubble-telescope-earth-horizon.jpg";
+
 const backgroundContainer = document.getElementById("background");
 
 export default function backgroundDisplay() {
@@ -6,36 +13,33 @@ export default function backgroundDisplay() {
 
   switch (currentUrl) {
     case "/":
-      backgroundUrl =
-        "../../assets/asteroidImages/potentially-hazardous-asteroids.jpg";
+      backgroundUrl = potentiallyHazardousImage;
       break;
 
     case "/details":
-      backgroundUrl = "../assets/asteroidImages/ida-and-dactyl-galileo.jpg";
+      backgroundUrl = idaAndDactyl;
       break;
 
     case "/approaching":
-      backgroundUrl = "../assets/asteroidImages/the-snowman-vesta.jpg";
+      backgroundUrl = theSnowman;
       break;
 
     case "/asteroids-visited-by-aircrafts":
-      backgroundUrl = "../assets/asteroidImages/ceres-juling-crater-dawn.jpg";
+      backgroundUrl = ceresJulingCrater;
       break;
 
     case "/about":
-      backgroundUrl = "../assets/asteroidImages/ceres-craters-dawn.jpg";
+      backgroundUrl = ceresCrater;
       break;
 
     case "/contact":
-      backgroundUrl =
-        "../assets/asteroidImages/hubble-telescope-earth-horizon.jpg";
+      backgroundUrl = hubble;
       break;
 
     default:
-      backgroundUrl = "../assets/asteroidImages/ceres-juling-crater-dawn.jpg";
+      backgroundUrl = ceresJulingCrater;
       break;
   }
 
   backgroundContainer.style.backgroundImage = "url(" + backgroundUrl + ")";
-  console.log(backgroundUrl);
 }
