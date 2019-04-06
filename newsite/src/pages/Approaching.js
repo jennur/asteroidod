@@ -80,7 +80,7 @@ class Approaching extends React.Component {
     return (
       <section className="content-container">
         {" "}
-        <h2>Approaching Asteroids</h2>
+        <h2>Todays approaching Asteroids</h2>
         {accordionSection}
       </section>
     );
@@ -102,9 +102,12 @@ class Approaching extends React.Component {
         return response.json();
       })
       .then(data => {
+        let moreAsteroids = data.near_earth_objects[date];
+        moreAsteroids.shift();
+
         this.setState({
           numNeos: data.element_count,
-          neos: data.near_earth_objects[date],
+          neos: moreAsteroids,
           isLoaded: true
         });
       });

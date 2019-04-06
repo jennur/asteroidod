@@ -8,6 +8,7 @@ import backgroundDisplay from "./js/backgroundDisplay";
 /* Display background */
 window.onload = backgroundDisplay;
 window.onhashchange = backgroundDisplay;
+
 /* Make sure asteroid ID is available from everywhere */
 
 let apiKey = "sl1hP0MUGkJLn8tw2qXsxb6235u91ndRBDuD0O2d";

@@ -9,6 +9,7 @@ import Details from "./pages/Details";
 import AsteroidsVisitedByAircrafts from "./pages/AsteroidsVisitedByAircrafts";
 import Contact from "./pages/Contact";
 import Approaching from "./pages/Approaching";
+import stickyHeader from "./js/stickyHeader";
 
 import { HashRouter, Route, Switch } from "react-router-dom";
 
@@ -38,7 +39,9 @@ class App extends React.Component {
       </div>
     );
   }
-  componentDidMount() {}
+  componentDidMount() {
+    stickyHeader();
+  }
 }
 
 export default App;
