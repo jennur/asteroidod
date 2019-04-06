@@ -50,7 +50,8 @@
     font-size: var(--fontSizeXL);
     flex-basis: 100%;
   }
-  .header--sticky .header__headline {
-    font-size: var(--fontSizeLarge);
+  .header--sticky {
+    position: relative;
+    background: transparent;
   }
 }
