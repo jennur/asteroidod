@@ -2,7 +2,7 @@
   "asteroidsVisitedByAircrafts": [
     {
       "name": "1 Ceres",
-      "imageUrl": "assets/visitedAsteroids/ceres-dawn.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jennur/asteroidod/master/newsite/assets/visitedAsteroids/ceres-dawn.jpg",
       "description": [
         "Ceres was the first asteroid to be discovered in 1801 by the Italian",
         "astronomer Giuseppe Piazzi. It was at that time considered to be a new planet,",
@@ -17,7 +17,7 @@
     },
     {
       "name": "4 Vesta",
-      "imageUrl": "assets/visitedAsteroids/vesta-dawn.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jennur/asteroidod/master/newsite/assets/visitedAsteroids/vesta-dawn.jpg",
       "description": [
         "Vesta is the second most massive (but not the second largest - Pallas is the second largest by volume)",
         "asteroid in the asteroid belt. It was discovered in 1807 by Heinrich Wilhelm Olbers, and was the fourth asteroid",
@@ -33,7 +33,7 @@
     },
     {
       "name": "21 Lutetia",
-      "imageUrl": "assets/visitedAsteroids/lutetia-rosetta.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jennur/asteroidod/master/newsite/assets/visitedAsteroids/lutetia-rosetta.jpg",
       "description": [
         "Lutetia was discovered in 1852 by Hermann Mayer Salomon Goldschmidt in France.",
         "It has an irregular shape where the longest diameter is about 132 km, while the smallest",
@@ -47,7 +47,7 @@
     },
     {
       "name": "243 Ida",
-      "imageUrl": "assets/visitedAsteroids/ida-and-dactyl-galileo.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jennur/asteroidod/master/newsite/assets/visitedAsteroids/ida-and-dactyl-galileo.jpg",
       "description": [
         "243 Ida was discovered in 1884 by Johann Palisa, an Austrian astronomer, in Vienna.",
         "At the time it was not known that Ida had its own moon. The moon, today known as Dactyl, was not discovered until",
@@ -60,7 +60,7 @@
     },
     {
       "name": "253 Mathilde",
-      "imageUrl": "assets/visitedAsteroids/mathilde-near.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jennur/asteroidod/master/newsite/assets/visitedAsteroids/mathilde-near.jpg",
       "description": [
         "Mathilde was discovered in 1885 by Johann Palisa. Its diameter is about 52 km (32 miles)",
         "and because of its high concentration of carbon, the asteroid is very dark - it reflects",
@@ -73,7 +73,7 @@
     },
     {
       "name": "433 Eros",
-      "imageUrl": "assets/visitedAsteroids/eros-near.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jennur/asteroidod/master/newsite/assets/visitedAsteroids/eros-near.jpg",
       "description": [
         "Eros was discovered in 1898 by both Gustav Witt in Germany and Auguste H.P",
         "Charlois in France (independently of each other). It was the first Near Earth asteroid",
@@ -88,7 +88,7 @@
     },
     {
       "name": "951 Gaspra",
-      "imageUrl": "assets/visitedAsteroids/gaspra-galileo.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/jennur/asteroidod/master/newsite/assets/visitedAsteroids/gaspra-galileo.jpg",
       "description": [
         "Gaspra was discovered in 1916 by Grigoriy N. Neujamin. Gaspras largest diameter",
         "is about 20 km (12.5 miles). It was given very little attention until",
