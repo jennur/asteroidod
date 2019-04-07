@@ -486,6 +486,7 @@ fieldset{
   width: 44px;
   margin: 5px 15px 5px 5px;
   transition: 0.2s;
+  pointer-events: none;
 }
 
 .c-main-nav__item--link:hover {
