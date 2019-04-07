@@ -146,6 +146,7 @@ class Home extends React.Component {
           },
           isLoaded: true
         });
+        console.log(data);
       });
   }
 }
