@@ -212,6 +212,33 @@ footer {
   color: var(--colorBlack);
 }
 
+.facebook-share {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  max-width: 500px;
+  margin: var(--spacingMedium) 0px;
+  border: 2px solid var(--colorBlue);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.facebook-share__headline {
+  color: var(--colorWhite);
+  padding-left: var(--spacingMedium);
+}
+
+.fb-share-button {
+  padding: 0px var(--spacingMedium);
+  color: #3b5998;
+}
+
+.fb-share-button a:hover {
+  padding: 0px;
+}
+
 
 fieldset{
     min-width: 300px;

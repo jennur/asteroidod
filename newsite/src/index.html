@@ -26,7 +26,7 @@
     <meta name="title" content="Asteroid of the Day" />
     <meta
       name="description"
-      content="Discover the nearest asteroids today ☄️. See features and close approach data. Updated daily from NASA's Near Earth Object API's."
+      content="Discover the nearest asteroids today ☄️. Updated daily from NASA's Near Earth Object API's."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -34,7 +34,7 @@
     <meta property="og:title" content="Asteroid of the Day" />
     <meta
       property="og:description"
-      content="Discover the nearest asteroids today ☄️. See close approach data. Updated daily from NASA's Near Earth Object API's."
+      content="Discover the nearest asteroids today ☄️. Updated daily from NASA's Near Earth Object API's."
     />
     <meta
       property="og:image"
@@ -45,7 +45,7 @@
     <meta name="twitter:title" content="Asteroid of the Day" />
     <meta
       name="twitter:description"
-      content="Discover the nearest asteroids today ☄️. See close approach data. Updated daily from NASA's Near Earth Object API's."
+      content="Discover the nearest asteroids today ☄️. Updated daily from NASA's Near Earth Object API's."
     />
     <meta
       name="twitter:image"
@@ -56,6 +56,20 @@
     <title>Asteroid of the Day</title>
   </head>
   <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
     <div id="background"></div>
     <div id="filter"></div>
 
