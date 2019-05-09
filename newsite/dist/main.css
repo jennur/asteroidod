@@ -239,124 +239,134 @@ footer {
   padding: 0px;
 }
 
+fieldset {
+  min-width: 300px;
+  max-width: 500px;
+  padding: 1.5rem;
+  border: 0.01rem solid #4ba2ce;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+fieldset legend {
+  text-align: center;
+  color: #ffef00;
+}
 
-fieldset{
-    min-width: 300px;
-    max-width: 500px;
-    padding: 1.5rem;
-    border: 0.01rem solid #4ba2ce;
-    background-color: rgba(0,0,0,0.75);
-  
-  }
-  fieldset legend{
-    text-align: center;
-    color: #ffef00;
-  }
-  
-  form{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: var(--bodyFont);
-    font-size: var(--fontSizeRoot);
-  }
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--bodyFont);
+  font-size: var(--fontSizeRoot);
+}
 
-  input[type], textarea{
-    background-color: rgba(0,0,0,0.75);
-    color: white;
-    font-size: var(--fontSizeRoot);
-    border: 0.01rem solid rgba(75,162,206,0.75);
-  }
+input[type],
+textarea {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-size: var(--fontSizeSmall);
+  font-family: var(--bodyFont);
 
-  input[type]:focus, textarea:focus{
-    border: 0.01rem solid rgba(75,162,206,1.0);
-    outline: none;
-  }
+  border: 0.01rem solid rgba(75, 162, 206, 0.75);
+}
 
-  input[type="text"]{
-    width: 42%;
-    margin: 0.5rem;
-    padding: 0.5rem;
-  }
-  
-  textarea, input[type="email"]{
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem;
-  }
-  
-  textarea{
-    height: 9rem;
-    resize: none;
-  }
-  
-  ::placeholder{
-    color: white;
-    font-size: var(--fontSizeRoot);
-    opacity: 1;
-  }
-  ::-ms-input-placeholder{
-    color: white;
-    opacity: 1;
-  }
-  :-ms-input-placeholder{
-    color: white;
-    opacity: 1;
-  }
-  
-  input[type="submit"]{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
-    width: 10rem;
-    margin: 0.5rem auto;
-    border: 0.1rem solid #ffef00;
-    font-family: 'Nova Mono', monospace;
-    color: #ffef00 !important;
-    letter-spacing: -0.05rem;
-    transition: background-color 0.5s;
-    -o-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;
-  }
-  input[type="submit"]:after{
-    border-bottom: none;
-  }
-  input[type="submit"]:hover, input[type="submit"]:active{
-    background-color: #ffef00;
-    color:black !important;
-    text-decoration: none;
-    border: 0.1rem solid #ffef00;
-    cursor: pointer;
-  }
-  
-  .hide-robot{
-    height: 0px; 
-  }
-  
-  .display-robot {
-    height: 30px;
-  }
-  
-  #name-error, #email-error, #subject-error, #message-error, #submit-error{
-    display: block;
-    width: 100%;
-    color: red;
-    font-size: var(--fontSizeSmall);
-    padding-left: var(--spacingSmall);
-    margin: 0 auto;
-    overflow: hidden;
-    transition: 0.5s;
-  }
+input[type]:focus,
+textarea:focus {
+  border: 0.01rem solid rgba(75, 162, 206, 1);
+  outline: none;
+}
 
-  .error{
-    border: 0.01rem solid red !important;
-  }
+input[type="text"] {
+  width: 42%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+textarea,
+input[type="email"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+textarea {
+  height: 9rem;
+  resize: none;
+}
+
+::placeholder {
+  color: white;
+  font-size: var(--fontSizeSmall);
+  opacity: 1;
+  font-family: var(--bodyFont);
+}
+::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+input[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 10rem;
+  margin: 0.5rem auto;
+  border: 0.1rem solid #ffef00;
+  font-family: "Nova Mono", monospace;
+  color: #ffef00 !important;
+  letter-spacing: -0.05rem;
+  transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+}
+input[type="submit"]:after {
+  border-bottom: none;
+}
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #ffef00;
+  color: black !important;
+  text-decoration: none;
+  border: 0.1rem solid #ffef00;
+  cursor: pointer;
+}
+
+.hide-robot {
+  height: 0px;
+}
+
+.display-robot {
+  height: 30px;
+}
+
+#name-error,
+#email-error,
+#subject-error,
+#message-error,
+#submit-error {
+  display: block;
+  width: 100%;
+  color: red;
+  font-size: var(--fontSizeSmall);
+  padding-left: var(--spacingSmall);
+  margin: 0 auto;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.error {
+  border: 0.01rem solid red !important;
+}
+
 .header-content-space {
   /* To make everything stay in place when sticky-class is added*/
   display: block;
