@@ -58,10 +58,10 @@ class AsteroidsVisitedByAircrafts extends React.Component {
     return (
       <section className="asteroids-visited-by-aircrafts">
         <h2 className="asteroids-visited-by-aircrafts__headline">
-          Asteroids visited by aircrafts
+          Asteroids visited by spacecrafts
         </h2>
         {asteroidContainers}
-        <Asteroid wide={true} name="Other asteroids visited by aircraft">
+        <Asteroid wide={true} name="Other asteroids visited by spacecraft">
           {moreAsteroidsString}
         </Asteroid>
       </section>

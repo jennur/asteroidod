@@ -49,7 +49,7 @@ class Navigation extends React.Component {
               to="/asteroids-visited-by-aircrafts"
             >
               <img className="c-main-nav__icon" src={earth} />
-              {this.state.showText ? "Asteroids visited by aircrafts" : null}
+              {this.state.showText ? "Asteroids visited by spacecrafts" : null}
             </Link>
           </li>
           <li className="c-main-nav__item">
