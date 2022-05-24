@@ -57,5 +57,15 @@ module.exports = {
   plugins: [
       htmlPlugin, 
       cssPlugin
-    ]
+    ],
+  resolve: {
+    fallback: {
+      "buffer": false
+    }
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  }
 };

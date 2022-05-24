@@ -1,6 +1,6 @@
 {
     "creators": [{ "name": "Bonsak, Jenny" }],
-    "description": "",
+    "description": "A site based on NASA's NEO APIs. Check out the nearest asteroid of the day.",
     "keywords": [
         "Asteroids",
         "NASA",
