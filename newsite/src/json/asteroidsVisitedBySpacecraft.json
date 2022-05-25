@@ -1,5 +1,5 @@
 {
-  "asteroidsVisitedByAircrafts": [
+  "AsteroidsVisitedBySpacecrafts": [
     {
       "name": "1 Ceres",
       "imageUrl": "https://raw.githubusercontent.com/jennur/asteroidod/master/newsite/assets/visitedAsteroids/ceres-dawn.jpg",

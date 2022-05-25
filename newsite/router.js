@@ -6,7 +6,7 @@ export default (
     <Route path="/" />
     <Route path="/details" />
     <Route path="/approaching" />
-    <Route path="/asteroids-visited-by-aircrafts" />
+    <Route path="/asteroids-visited-by-spacecrafts" />
     <Route path="/about" />
     <Route path="/contact" />
     <Route />

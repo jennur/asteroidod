@@ -1,4 +1,4 @@
-.asteroids-visited-by-aircrafts {
+.asteroids-visited-by-spacecrafts {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
 
   width: 100%;
 }
-.asteroids-visited-by-aircrafts__headline {
+.asteroids-visited-by-spacecrafts__headline {
   flex-basis: 100%;
 }
 .visited-asteroid-wrapper {

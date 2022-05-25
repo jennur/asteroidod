@@ -1,17 +1,10 @@
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
-import asteroidsJson from "../json/asteroidsVisitedByAirCraft.json";
+import asteroidsJson from "../json/asteroidsVisitedBySpacecraft.json";
 import Loading from "../components/Loading";
 import Asteroid from "../components/Asteroid";
-import ceres from "../../assets/visitedAsteroids/ceres-dawn.jpg";
-import eros from "../../assets/visitedAsteroids/eros-near.jpg";
-import gaspra from "../../assets/visitedAsteroids/gaspra-galileo.jpg";
-import ida from "../../assets/visitedAsteroids/ida-and-dactyl-galileo.jpg";
-import lutetia from "../../assets/visitedAsteroids/lutetia-rosetta.jpg";
-import mathilde from "../../assets/visitedAsteroids/mathilde-near.jpg";
-import vesta from "../../assets/visitedAsteroids/vesta-dawn.jpg";
 
-class AsteroidsVisitedByAircrafts extends React.Component {
+class AsteroidsVisitedBySpacecrafts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,8 +49,8 @@ class AsteroidsVisitedByAircrafts extends React.Component {
       " - "
     );
     return (
-      <section className="asteroids-visited-by-aircrafts">
-        <h2 className="asteroids-visited-by-aircrafts__headline">
+      <section className="asteroids-visited-by-spacecrafts">
+        <h2 className="asteroids-visited-by-spacecrafts__headline">
           Asteroids visited by spacecrafts
         </h2>
         {asteroidContainers}
@@ -69,7 +62,7 @@ class AsteroidsVisitedByAircrafts extends React.Component {
   }
   componentDidMount() {
     let data = JSON.parse(JSON.stringify(asteroidsJson));
-    this.setState({ asteroids: data.asteroidsVisitedByAircrafts }, () => {
+    this.setState({ asteroids: data.AsteroidsVisitedBySpacecrafts }, () => {
       this.state.asteroids
         ? this.setState({ jsonIsLoaded: true })
         : this.setState({ jsonIsLoaded: false });
@@ -77,4 +70,4 @@ class AsteroidsVisitedByAircrafts extends React.Component {
   }
 }
 
-export default AsteroidsVisitedByAircrafts;
+export default AsteroidsVisitedBySpacecrafts;

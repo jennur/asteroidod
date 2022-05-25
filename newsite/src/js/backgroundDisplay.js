@@ -24,7 +24,7 @@ export default function backgroundDisplay() {
       backgroundUrl = theSnowman;
       break;
 
-    case "/asteroids-visited-by-aircrafts":
+    case "/asteroids-visited-by-spacecrafts":
       backgroundUrl = ceresJulingCrater;
       break;
 

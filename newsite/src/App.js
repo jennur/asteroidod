@@ -6,7 +6,7 @@ import "./css/main.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Details from "./pages/Details";
-import AsteroidsVisitedByAircrafts from "./pages/AsteroidsVisitedByAircrafts";
+import AsteroidsVisitedBySpacecrafts from "./pages/AsteroidsVisitedBySpacecrafts";
 import Contact from "./pages/Contact";
 import Page404 from "./pages/Page404";
 import Approaching from "./pages/Approaching";
@@ -27,8 +27,8 @@ class App extends React.Component {
             <Route exact path="/approaching" component={Approaching} />
             <Route
               exact
-              path="/asteroids-visited-by-aircrafts"
-              component={AsteroidsVisitedByAircrafts}
+              path="/asteroids-visited-by-spacecrafts"
+              component={AsteroidsVisitedBySpacecrafts}
             />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
